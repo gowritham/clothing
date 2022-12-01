@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">Clothing</string>
+    <string name="app_name">OnBoardingScreens</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onboarding1">Onboarding Screen 1</string>
+    <string name="onboarding2">Onboarding Screen 2</string>
+    <string name="onboarding3">Onboarding Screen 3</string>
+    <string name="one">1</string>
+    <string name="page_count">/3</string>
+    <string name="skip">Skip</string>
+    <string name="choose_product">Choose Product</string>
+    <string name="context1">A product is the item offered for sale. A product can be a service or an item. It can be physical or in virtual or cyber form</string>
+    <string name="button_1"><![CDATA[Next >]]></string>
+    <string name="two">2</string>
+    <string name="make_payment">Make payment</string>
+    <string name="context_2">Payment is the transfer of money services in exchange product or Payments typically made terms agreed</string>
+    <string name="button_2"><![CDATA[Next >>]]></string>
+    <string name="three">3</string>
+    <string name="get_your_order">Get Your Order</string>
+    <string name="context_3">Business or commerce an order is a stated intention either spoken to engage in a commercial transaction specific products</string>
+    <string name="button_3"><![CDATA[Get Started >>>]]></string>
 </resources>
