@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Clothing/app/src/main/res/drawable/background.xml" value="0.205" />
         <entry key="..\:/Clothing/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Clothing/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Clothing/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Clothing/app/src/main/res/layout/fragment_my_cart.xml" value="0.25" />
         <entry key="..\:/Clothing/app/src/main/res/layout/fragment_onboarding1.xml" value="0.25" />
         <entry key="..\:/Clothing/app/src/main/res/layout/fragment_onboarding2.xml" value="0.25" />
