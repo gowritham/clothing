@@ -19,4 +19,26 @@
     <string name="get_your_order">Get Your Order</string>
     <string name="context_3">Business or commerce an order is a stated intention either spoken to engage in a commercial transaction specific products</string>
     <string name="button_3"><![CDATA[Get Started >>>]]></string>
+
+    <!-- Signup_page-->
+    <string name="sign_up">Sign Up</string>
+
+    <string name="name">Name</string>
+    <string name="email_address">E-mail</string>
+    <string name="password">Password</string>
+
+    <string name="text1">I accept all the </string>
+    <string name="text3">Terms &amp; Conditions</string>
+
+    <string name="buttonText">Sign Up</string>
+
+    <string name="line">Or</string>
+
+    <string name="text2">if already have an account?</string>
+    <string name="log_in">Log In</string>
+
+
+    <string name="a_c_s">Successfully Done!</string>
+    <string name="home">Home</string>
+
 </resources>
