@@ -49,6 +49,7 @@ class AccountCreationFragment : Fragment() {
                 k.show()
             }
         }
+
         return view
 
     }
