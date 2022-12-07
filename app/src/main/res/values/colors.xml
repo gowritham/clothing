@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#F67952</color>
-
+    <color name="light_grey">#CED0E3</color>
     //SignUp
 
     <color name="black_vol">#230A06</color>
