@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
+
 import com.clothing.R
-import org.w3c.dom.Text
+
 
 
 class AccountCreationFragment : Fragment() {
@@ -24,10 +23,13 @@ class AccountCreationFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_account_creation, container, false)
 
-        val userName = view.findViewById<EditText>(R.id.Name)
-        val mailAddress = view.findViewById<EditText>(R.id.Email)
-        val password = view.findViewById<EditText>(R.id.password)
-        val button = view.findViewById<Button>(R.id.button_sign_up)
+        val userName = view.findViewById<EditText>(R.id.editTextTextPersonName)
+        val mailAddress = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
+        val password = view.findViewById<EditText>(R.id.editTextTextPassword)
+        val button = view.findViewById<Button>(R.id.button)
+
+        //val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\.+[a-z]+"
+        //val passwordPattern="\"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$\""
 
         button.setOnClickListener{
             if(userName.text.toString().isNotEmpty() && mailAddress.text.toString().isNotEmpty() && password.text.toString()
@@ -41,6 +43,7 @@ class AccountCreationFragment : Fragment() {
 
 
             }else {
+
                 val k = Toast.makeText(
                     activity,
                     "Enter the input fields",
