@@ -59,6 +59,9 @@
         <action
             android:id="@+id/action_loginFragment_to_accountCreationFragment"
             app:destination="@id/accountCreationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_product_details"
+            app:destination="@id/product_details" />
     </fragment>
 
 
@@ -69,6 +72,11 @@
         android:label="fragment_account_creation"
 
         tools:layout="@layout/fragment_account_creation" />
+    <fragment
+        android:id="@+id/product_details"
+        android:name="com.clothing.UI.product_details"
+        android:label="fragment_product_details2"
+        tools:layout="@layout/fragment_product_details2" />
 
 
 </navigation>
