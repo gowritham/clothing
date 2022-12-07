@@ -19,6 +19,13 @@
     <string name="get_your_order">Get Your Order</string>
     <string name="context_3">Business or commerce an order is a stated intention either spoken to engage in a commercial transaction specific products</string>
     <string name="button_3"><![CDATA[Get Started >>>]]></string>
+    // login screen
+
+    <string name="sign_in">Log in</string>
+    <string name="or">Or</string>
+    <string name="forgetpassword">Forget Password?</string>
+    <string name="log_dont">Dont have an account?</string>
+
 
     <!-- Signup_page-->
     <string name="sign_up">Sign Up</string>
@@ -42,4 +49,10 @@
 
     <string name="home">Home</string>
 
+    //Product details
+
+    <string name="pd_title">Causal Honely Shirts</string>
+    <string name="cost">$100</string>
+    <string name="pd_desc">A Henley shirt is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons.</string>
+    <string name="pd_btn">Add to cart</string>
 </resources>
