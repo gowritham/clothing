@@ -35,12 +35,12 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/rectangle_bg"
+        android:background="@drawable/background_inputfiled_for_edittext"
         android:ems="5"
         android:textSize="12sp"
         android:inputType="textPersonName"
@@ -48,7 +48,6 @@
         android:drawableStart="@drawable/ic_profile2"
         android:drawablePadding="16dp"
         android:padding="10dp"
-
         android:textColor="@color/black"
         android:textColorHint="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,12 +57,12 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/rectangle_bg"
+        android:background="@drawable/background_inputfiled_for_edittext"
         android:hint="@string/email_address"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="16dp"
@@ -80,12 +79,12 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/rectangle_bg"
+        android:background="@drawable/background_inputfiled_for_edittext"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="16dp"
         android:padding="10dp"
