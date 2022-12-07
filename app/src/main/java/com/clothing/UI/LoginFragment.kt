@@ -19,7 +19,7 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_login, container, false)
         val signUp = view.findViewById<TextView>(R.id.signUp)
-
+        val forgotPassword=view.findViewById<TextView>(R.id.tvForget)
         val log_in_button=view.findViewById<Button>(R.id.loginBtn)
         signUp.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_accountCreationFragment)
@@ -27,6 +27,10 @@ class LoginFragment : Fragment() {
         log_in_button.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_product_details)
         }
+        forgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPassword)
+        }
+
         return view
     }
 }
