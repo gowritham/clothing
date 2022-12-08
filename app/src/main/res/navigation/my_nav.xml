@@ -62,6 +62,9 @@
         <action
             android:id="@+id/action_loginFragment_to_product_details"
             app:destination="@id/product_details" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
     </fragment>
 
 
@@ -77,6 +80,11 @@
         android:name="com.clothing.UI.product_details"
         android:label="fragment_product_details2"
         tools:layout="@layout/fragment_product_details2" />
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.clothing.UI.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
 
 
 </navigation>
