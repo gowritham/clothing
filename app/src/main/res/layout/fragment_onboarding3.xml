@@ -36,11 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="276dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/skip"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/screenCount3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/getYourOrder"
@@ -81,6 +83,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="22dp"
         android:gravity="center"
+        android:textSize="14sp"
         android:text="@string/context_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,15 +91,15 @@
 
     <Button
         android:id="@+id/next3"
-        android:layout_width="218dp"
-        android:layout_height="59dp"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         android:layout_marginStart="78dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="79dp"
         android:text="@string/button_3"
         android:textColor="@color/white"
         android:background="@drawable/background"
-        android:textSize="19sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/context3" />
