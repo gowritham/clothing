@@ -39,23 +39,8 @@
 
     <string name="buttonText">Sign Up</string>
 
-
     <string name="text2">if already have an account?</string>
     <string name="log_in">Log In</string>
-
-
-    <string name="a_c_s">Successfully Done!</string>
-
-    <string name="home">Home</string>
-
-
-    //Forgot Password
-
-    <string name="forgot_password">Forgot Password</string>
-    <string name="email">Email</string>
-    <string name="submit_btn">Submit</string>
-
-
 
     //Product details
 
@@ -63,55 +48,4 @@
     <string name="cost">$100</string>
     <string name="pd_desc">A Henley shirt is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons.</string>
     <string name="pd_btn">Add to cart</string>
-
-    <!--Home -->
-    <string name="homenamme">Home Fragment</string>
-
-    <!--cart -->
-    <string name="cartname">Cart Fragment</string>
-
-    <!--favorite-->
-    <string name="favoritename">Favorite Name</string>
-
-    <!-- profile -->
-    <string name="profile">Profile</string>
-    <string name="profilename">Alex Nikiforov</string>
-    <string name="profileemail">alex@msn.com</string>
-    <string name="profilepersonalinformation">Personal Information</string>
-    <string name="profilecardName">Name</string>
-    <string name="profilecardchrisharison">Chris Harison</string>
-    <string name="profilecardemail">chris@gmail.com</string>
-    <string name="profilecardlocation">San Diego</string>
-    <string name="profilecardzincode">Zin Code</string>
-    <string name="profilecardno">1200</string>
-    <string name="profilecardphone">Phone Number</string>
-    <string name="profilecardmobile">(+1)5848475784</string>
-
-    <!--bottom nav -->
-    <string name="Home">Home</string>
-    <string name="cart">Cart</string>
-    <string name="favorite">favorite</string>
-    <string name="Profile">Profile</string>
-    <!--side nav-->
-    <string name="myfavorites">My favorite</string>
-    <string name="wallets">Wallets</string>
-    <string name="myorder">My order</string>
-    <string name="aboutus">About us</string>
-    <string name="privacypolicy">Privacy Police</string>
-    <string name="settings">Settings</string>
-
-    <!--cart-->
-    <string name="mycart">My Cart</string>
-    <string name="henleyshirts">Henley Shirts</string>
-    <string name="no1">$ 250</string>
-    <string name="no2">$ 550</string>
-    <string name="no3">1</string>
-    <string name="no4">2</string>
-
-    <string name="subtotal">Sub Total :</string>
-    <string name="no5">$ 250</string>
-    <string name="checkout">Checkout</string>
-
-
-
 </resources>
