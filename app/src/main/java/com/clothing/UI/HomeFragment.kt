@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.cart -> replaceFragment(MyCartFragment())
-                R.id.favaurite -> replaceFragment(FavouriteFragment())
+                R.id.favorite -> replaceFragment(FavouriteFragment())
                 R.id.profile -> replaceFragment(myprofileFragment())
 
             }
