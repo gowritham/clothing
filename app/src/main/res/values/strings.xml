@@ -65,6 +65,12 @@
     <string name="sub_total">Sub Total :</string>
     <string name="total_price">$ 800</string>
     <string name="cart_btn_text">Checkout</string>
+    <string name="settings_title">Settings</string>
+    <string name="email_support">Email Support</string>
+    <string name="settings_faq">FAQ</string>
+    <string name="settings_privacy_statement">Privacy Statement</string>
+    <string name="settings_notification">Notification</string>
+    <string name="settings_update">Update</string>
 
 
 </resources>
