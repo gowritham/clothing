@@ -74,7 +74,11 @@
         android:name="eu.developer.sign_up.AccountCreationFragment"
         android:label="fragment_account_creation"
 
-        tools:layout="@layout/fragment_account_creation" />
+        tools:layout="@layout/fragment_account_creation" >
+        <action
+            android:id="@+id/action_accountCreationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/product_details"
         android:name="com.clothing.UI.product_details"
