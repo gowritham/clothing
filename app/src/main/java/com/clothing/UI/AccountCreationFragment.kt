@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 
 import com.clothing.R
 
@@ -27,6 +29,7 @@ class AccountCreationFragment : Fragment() {
         val mailAddress = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
         val password = view.findViewById<EditText>(R.id.editTextTextPassword)
         val button = view.findViewById<Button>(R.id.button)
+        val loginText = view.findViewById<TextView>(R.id.login_register_text)
 
         //val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\.+[a-z]+"
         //val passwordPattern="\"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$\""
@@ -51,6 +54,9 @@ class AccountCreationFragment : Fragment() {
                 )
                 k.show()
             }
+        }
+        loginText.setOnClickListener {
+            findNavController().navigate(R.id.action_accountCreationFragment_to_loginFragment)
         }
 
         return view

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">OnBoardingScreens</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,18 +23,18 @@
 
     <string name="sign_in">Log in</string>
     <string name="or">Or</string>
-    <string name="forgetpassword">Forget Password?</string>
-    <string name="log_dont">Dont have an account?</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="log_dont" tools:ignore="StringEscaping">Don\'t have an account?</string>
 
 
     <!-- Signup_page-->
     <string name="sign_up">Sign Up</string>
 
     <string name="name">Name</string>
-    <string name="email_address">E-mail</string>
+    <string name="email_address">Email</string>
     <string name="password">Password</string>
 
-    <string name="text1">I accept all the </string>
+    <string name="text_term">I accept all the</string>
     <string name="text3">Terms &amp; Conditions</string>
 
     <string name="buttonText">Sign Up</string>
@@ -48,4 +48,29 @@
     <string name="cost">$100</string>
     <string name="pd_desc">A Henley shirt is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons.</string>
     <string name="pd_btn">Add to cart</string>
+
+    //Forget Screen
+    <string name="submit_btn">Submit</string>
+    <string name="forgot_text">Forgot Password</string>
+
+    //CartPage
+    <string name="card_heading">My cart</string>
+    <string name="cart_product_text1">Henley Shirts</string>
+    <string name="cart_product_price1">$ 250</string>
+    <string name="product_quantity1">1</string>
+
+    <string name="cart_product_text2">Henley T-Shirts</string>
+    <string name="cart_product_price2">$ 550</string>
+    <string name="product_quantity2">2</string>
+    <string name="sub_total">Sub Total :</string>
+    <string name="total_price">$ 800</string>
+    <string name="cart_btn_text">Checkout</string>
+    <string name="settings_title">Settings</string>
+    <string name="email_support">Email Support</string>
+    <string name="settings_faq">FAQ</string>
+    <string name="settings_privacy_statement">Privacy Statement</string>
+    <string name="settings_notification">Notification</string>
+    <string name="settings_update">Update</string>
+
+
 </resources>

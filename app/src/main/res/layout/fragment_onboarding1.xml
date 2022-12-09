@@ -69,11 +69,13 @@
         android:layout_marginTop="490dp"
         android:layout_marginEnd="98dp"
         android:text="@string/choose_product"
+        android:textFontWeight="400"
         android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
 
     <TextView
         android:id="@+id/context1"
@@ -83,6 +85,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="22dp"
         android:gravity="center"
+        android:textSize="14sp"
         android:text="@string/context1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +93,8 @@
 
     <Button
         android:id="@+id/next1"
-        android:layout_width="205dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         android:layout_marginStart="78dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="79dp"
@@ -99,8 +102,8 @@
         android:textColor="@color/white"
         android:background="@drawable/background"
         android:textSize="16sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/context1"
-        android:textAllCaps="false"/>
+        app:layout_constraintTop_toBottomOf="@+id/context1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

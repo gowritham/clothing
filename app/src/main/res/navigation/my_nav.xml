@@ -88,17 +88,30 @@
         android:name="com.clothing.UI.AccountCreationFragment"
         android:label="fragment_account_creation"
 
-        tools:layout="@layout/fragment_account_creation" />
+        tools:layout="@layout/fragment_account_creation" >
+        <action
+            android:id="@+id/action_accountCreationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/product_details"
         android:name="com.clothing.UI.product_details"
         android:label="fragment_product_details2"
-        tools:layout="@layout/fragment_product_details2" />
+        tools:layout="@layout/fragment_product_details2" >
+        <action
+            android:id="@+id/action_product_details_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/forgotPassword"
         android:name="com.clothing.UI.ForgotPassword"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.clothing.UI.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 
 
 </navigation>
