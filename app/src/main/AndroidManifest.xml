@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clothing">
         <activity
-            android:name="com.example.onboardingscreens.MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="true"
             tools:ignore="MissingClass">
             <intent-filter>

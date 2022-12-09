@@ -1,4 +1,4 @@
-package com.example.onboardingscreens
+package com.clothing.UI
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+
 import androidx.navigation.fragment.findNavController
 import com.clothing.R
 

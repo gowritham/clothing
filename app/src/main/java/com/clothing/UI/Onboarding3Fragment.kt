@@ -1,4 +1,4 @@
-package com.example.onboardingscreens
+package com.clothing.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

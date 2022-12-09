@@ -6,8 +6,22 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.clothing.UI.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_myprofileFragment"
+            app:destination="@id/myprofileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myprofileFragment"
+        android:name="com.clothing.UI.myprofileFragment"
+        android:label="fragment_myprofile"
+        tools:layout="@layout/fragment_myprofile" />
+    <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.onboardingscreens.SplashFragment"
+        android:name="com.clothing.UI.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -17,7 +31,7 @@
 
     <fragment
         android:id="@+id/onboarding1Fragment"
-        android:name="com.example.onboardingscreens.Onboarding1Fragment"
+        android:name="com.clothing.UI.Onboarding1Fragment"
         android:label="fragment_onboarding1"
         tools:layout="@layout/fragment_onboarding1" >
         <action
@@ -29,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboarding2Fragment"
-        android:name="com.example.onboardingscreens.Onboarding2Fragment"
+        android:name="com.clothing.UI.Onboarding2Fragment"
         android:label="fragment_onboarding2"
         tools:layout="@layout/fragment_onboarding2" >
         <action
@@ -41,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboarding3Fragment"
-        android:name="com.example.onboardingscreens.Onboarding3Fragment"
+        android:name="com.clothing.UI.Onboarding3Fragment"
         android:label="fragment_onboarding3"
         tools:layout="@layout/fragment_onboarding3" >
         <action
@@ -53,25 +67,25 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.onboardingscreens.LoginFragment"
+        android:name="com.clothing.UI.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_accountCreationFragment"
             app:destination="@id/accountCreationFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_product_details"
-            app:destination="@id/product_details" />
-        <action
             android:id="@+id/action_loginFragment_to_forgotPassword"
             app:destination="@id/forgotPassword" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
 
 
     <fragment
         android:id="@+id/accountCreationFragment"
-        android:name="eu.developer.sign_up.AccountCreationFragment"
+        android:name="com.clothing.UI.AccountCreationFragment"
         android:label="fragment_account_creation"
 
         tools:layout="@layout/fragment_account_creation" />

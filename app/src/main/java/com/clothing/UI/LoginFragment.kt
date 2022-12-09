@@ -1,4 +1,4 @@
-package com.example.onboardingscreens
+package com.clothing.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_accountCreationFragment)
         }
         log_in_button.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_product_details)
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
         }
         forgotPassword.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_forgotPassword)

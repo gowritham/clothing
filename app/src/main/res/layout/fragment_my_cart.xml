@@ -15,7 +15,8 @@
         android:layout_marginTop="54dp"
         android:src="@drawable/ic_back_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription"/>
 
 
     <TextView
@@ -25,7 +26,7 @@
         android:layout_marginStart="116dp"
         android:layout_marginTop="49dp"
         android:layout_marginEnd="152dp"
-        android:text="My cart"
+        android:text="@string/mycart"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +51,8 @@
             android:layout_marginEnd="21dp"
             android:src="@drawable/ic_card"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/iv_bg_product"
@@ -64,7 +66,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
             app:layout_constraintEnd_toEndOf="@+id/iv_card"
             app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView8"
@@ -78,7 +81,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_bg_product"
             app:layout_constraintEnd_toEndOf="@+id/iv_bg_product"
             app:layout_constraintStart_toStartOf="@+id/iv_bg_product"
-            app:layout_constraintTop_toTopOf="@+id/iv_bg_product" />
+            app:layout_constraintTop_toTopOf="@+id/iv_bg_product"
+            tools:ignore="contentDescription"/>
 
         <TextView
             android:id="@+id/tv_pr_name"
@@ -88,7 +92,7 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="131dp"
             android:layout_marginBottom="51dp"
-            android:text="Henley Shirts"
+            android:text="@string/henleyshirts"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
             app:layout_constraintEnd_toEndOf="@+id/iv_card"
@@ -103,7 +107,7 @@
             android:layout_marginTop="9dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="22dp"
-            android:text="$ 250"
+            android:text="@string/no1"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
@@ -123,7 +127,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
             app:layout_constraintEnd_toEndOf="@+id/iv_card"
             app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card"
+            tools:ignore="contentDescription"/>
 
         <TextView
             android:id="@+id/tv_item_count"
@@ -133,12 +138,13 @@
             android:layout_marginTop="38dp"
             android:layout_marginEnd="53dp"
             android:layout_marginBottom="36dp"
-            android:text="1"
+            android:text="@string/no3"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
             app:layout_constraintEnd_toEndOf="@+id/iv_card"
             app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView10"
@@ -152,7 +158,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card"
             app:layout_constraintEnd_toEndOf="@+id/iv_card"
             app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView11"
@@ -166,7 +173,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="@+id/imageView9"
             app:layout_constraintStart_toStartOf="@+id/imageView9"
-            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+            app:layout_constraintTop_toTopOf="@+id/imageView9"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView12"
@@ -180,7 +188,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="@+id/imageView10"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            tools:ignore="contentDescription"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -204,7 +213,8 @@
             android:layout_marginEnd="21dp"
             android:src="@drawable/ic_card"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/iv_bg_product1"
@@ -218,7 +228,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
             app:layout_constraintEnd_toEndOf="@+id/iv_card1"
             app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card1"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView8_1"
@@ -232,7 +243,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_bg_product1"
             app:layout_constraintEnd_toEndOf="@+id/iv_bg_product1"
             app:layout_constraintStart_toStartOf="@+id/iv_bg_product1"
-            app:layout_constraintTop_toTopOf="@+id/iv_bg_product1" />
+            app:layout_constraintTop_toTopOf="@+id/iv_bg_product1"
+            tools:ignore="contentDescription"/>
 
         <TextView
             android:id="@+id/tv_pr_name1"
@@ -242,12 +254,14 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="131dp"
             android:layout_marginBottom="51dp"
-            android:text="Henley T-Shirts"
+            android:text="@string/henleyshirts"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
             app:layout_constraintEnd_toEndOf="@+id/iv_card1"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card1"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/tv_price1"
@@ -257,7 +271,7 @@
             android:layout_marginTop="9dp"
             android:layout_marginEnd="176dp"
             android:layout_marginBottom="22dp"
-            android:text="$ 550"
+            android:text="@string/no2"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
@@ -277,7 +291,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
             app:layout_constraintEnd_toEndOf="@+id/iv_card1"
             app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card1"
+            tools:ignore="contentDescription"/>
 
         <TextView
             android:id="@+id/tv_item_count1"
@@ -287,7 +302,7 @@
             android:layout_marginTop="38dp"
             android:layout_marginEnd="53dp"
             android:layout_marginBottom="36dp"
-            android:text="2"
+            android:text="@string/no4"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
             app:layout_constraintEnd_toEndOf="@+id/iv_card1"
@@ -306,7 +321,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
             app:layout_constraintEnd_toEndOf="@+id/iv_card1"
             app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1" />
+            app:layout_constraintTop_toTopOf="@+id/iv_card1"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView11_1"
@@ -320,7 +336,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView9_1"
             app:layout_constraintEnd_toEndOf="@+id/imageView9_1"
             app:layout_constraintStart_toStartOf="@+id/imageView9_1"
-            app:layout_constraintTop_toTopOf="@+id/imageView9_1" />
+            app:layout_constraintTop_toTopOf="@+id/imageView9_1"
+            tools:ignore="contentDescription"/>
 
         <ImageView
             android:id="@+id/imageView12_1"
@@ -334,7 +351,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView10_1"
             app:layout_constraintEnd_toEndOf="@+id/imageView10_1"
             app:layout_constraintStart_toStartOf="@+id/imageView10_1"
-            app:layout_constraintTop_toTopOf="@+id/imageView10_1" />
+            app:layout_constraintTop_toTopOf="@+id/imageView10_1"
+            tools:ignore="contentDescription"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -348,7 +366,7 @@
         android:layout_marginTop="500dp"
         android:layout_marginEnd="286dp"
         android:layout_marginBottom="114dp"
-        android:text="Sub Total  :"
+        android:text="@string/subtotal"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -364,7 +382,7 @@
         android:layout_marginTop="500dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="112dp"
-        android:text="$ 250"
+        android:text="@string/no5"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -381,7 +399,7 @@
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/background"
-        android:text="Checkout"
+        android:text="@string/checkout"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textAllCaps="false"
