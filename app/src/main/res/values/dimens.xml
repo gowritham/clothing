@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="text_size">12sp</dimen>
+    <dimen name="header">22sp</dimen>
+    <dimen name="button_text">16sp</dimen>
+
+    <!--EditText_values-upTo_14th_line-->
+
+    <dimen name="start_end_margin">30dp</dimen>
+    <dimen name="top_margin">32dp</dimen>
+    <dimen name="top_margin1">14dp</dimen>
+
+    <dimen name="drawable_padding">16dp</dimen>
+    <dimen name="padding">10dp</dimen>
+
+    <dimen name="imageView3_start_margin">161dp</dimen>
+    <dimen name="imageView3_top_margin">84dp</dimen>
+    <dimen name="imageView3_end_margin">160dp</dimen>
+
+    <dimen name="imageView7_start_margin">91dp</dimen>
+    <dimen name="imageView7_top_margin">31dp</dimen>
+
+    <dimen name="imageView13_start_margin">20dp</dimen>
+    <dimen name="imageView13_top_margin">31dp</dimen>
+    <dimen name="imageView13_end_margin">99dp</dimen>
+
+    <dimen name="imageView14_start_margin">147dp</dimen>
+    <dimen name="imageView14_top_margin">32dp</dimen>
+
+    <dimen name="imageView15_start_margin">94dp</dimen>
+    <dimen name="imageView15_top_margin">32dp</dimen>
+    <dimen name="imageView15_end_margin">130dp</dimen>
+
+    <dimen name="button_width">205dp</dimen>
+    <dimen name="button_height">45dp</dimen>
+    <dimen name="button_start_end_margin">85dp</dimen>
+    <dimen name="button_top_margin">20dp</dimen>
+
+    <dimen name="checkbox_start_margin">21dp</dimen>
+    <dimen name="checkbox_end_margin">14dp</dimen>
+
+    <dimen name="textView_top_margin">40dp</dimen>
+
+    <dimen name="textView2_start_margin">4dp</dimen>
+    <dimen name="textView2_top_margin">21dp</dimen>
+
+    <dimen name="textView3_start_margin">3dp</dimen>
+    <dimen name="textView3_top_margin">20dp</dimen>
+
+    <dimen name="textView5_start_margin">20dp</dimen>
+    <dimen name="textView5_top_margin">20dp</dimen>
+
+
+    <dimen name="textView6_start_margin">106dp</dimen>
+    <dimen name="textView6_top_margin">30dp</dimen>
+
+    <dimen name="textView7_start_margin">2dp</dimen>
+    <dimen name="textView7_top_margin">30dp</dimen>
+    <dimen name="textView7_end_margin">99dp</dimen>
+
+
+
 
 
 

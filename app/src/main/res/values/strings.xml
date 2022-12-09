@@ -39,23 +39,8 @@
 
     <string name="buttonText">Sign Up</string>
 
-
     <string name="text2">if already have an account?</string>
     <string name="log_in">Log In</string>
-
-
-    <string name="a_c_s">Successfully Done!</string>
-
-    <string name="home">Home</string>
-
-
-    //Forgot Password
-
-    <string name="forgot_password">Forgot Password</string>
-    <string name="email">Email</string>
-    <string name="submit_btn">Submit</string>
-
-
 
     //Product details
 
@@ -63,7 +48,4 @@
     <string name="cost">$100</string>
     <string name="pd_desc">A Henley shirt is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons.</string>
     <string name="pd_btn">Add to cart</string>
-
-
-
 </resources>
