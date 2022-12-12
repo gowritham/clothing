@@ -9,6 +9,7 @@ import com.clothing.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
+
 class HomeFragment : Fragment() {
 
     override fun onCreateView(
@@ -22,8 +23,9 @@ class HomeFragment : Fragment() {
 
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
+                R.id.home -> replaceFragment(HomeFragment())
                 R.id.cart -> replaceFragment(MyCartFragment())
-                R.id.favorite -> replaceFragment(FavouriteFragment())
+                R.id.favorite -> replaceFragment(product_details())
                 R.id.profile -> replaceFragment(myprofileFragment())
 
             }
@@ -33,7 +35,7 @@ class HomeFragment : Fragment() {
     }
     private fun replaceFragment(fragment : Fragment) {
 
-        val fragmentManager=getFragmentManager()
+        val fragmentManager= fragmentManager
         val fragmentTransaction = fragmentManager?.beginTransaction()
         fragmentTransaction?.replace(R.id.frame_layout,fragment)
         fragmentTransaction?.commit()

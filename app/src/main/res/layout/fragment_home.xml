@@ -5,6 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/menu"
+        app:menu="@menu/toolbar_nav"
+        app:titleTextColor="@color/black"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
+
+
     <androidx.drawerlayout.widget.DrawerLayout
 
         android:layout_width="match_parent"
@@ -25,7 +36,9 @@
             android:id="@+id/nav_view"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            app:headerLayout="@layout/header_nav"
             app:menu="@menu/side_nav"
+            android:padding="10dp"
             app:itemIconTint="@color/orange"
             android:layout_gravity="start"
             android:fitsSystemWindows="true">

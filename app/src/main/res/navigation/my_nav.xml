@@ -9,11 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="com.clothing.UI.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_myprofileFragment"
-            app:destination="@id/myprofileFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/myprofileFragment"
         android:name="com.clothing.UI.myprofileFragment"
@@ -97,11 +93,7 @@
         android:id="@+id/product_details"
         android:name="com.clothing.UI.product_details"
         android:label="fragment_product_details2"
-        tools:layout="@layout/fragment_product_details2" >
-        <action
-            android:id="@+id/action_product_details_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_product_details2" />
     <fragment
         android:id="@+id/forgotPassword"
         android:name="com.clothing.UI.ForgotPassword"

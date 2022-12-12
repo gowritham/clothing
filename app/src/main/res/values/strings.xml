@@ -72,5 +72,51 @@
     <string name="settings_notification">Notification</string>
     <string name="settings_update">Update</string>
 
+    <!--Home -->
+    <string name="home_name">Home Fragment</string>
+
+    <!--cart -->
+    <string name="cart_name">Cart Fragment</string>
+
+    <!--favorite-->
+    <string name="favorite_name">Favorite Name</string>
+
+    <!-- profile -->
+    <string name="profile">Profile</string>
+    <string name="profile_name">Alex Nikiforov</string>
+    <string name="profile_email">alex@msn.com</string>
+    <string name="profile_personal_information">Personal Information</string>
+    <string name="profile_card_Name">Name</string>
+    <string name="profile_card_chrisharison">Chris Harison</string>
+    <string name="profile_card_email">chris@gmail.com</string>
+    <string name="profile_card_location">San Diego</string>
+    <string name="profile_card_zincode">Zin Code</string>
+    <string name="profile_card_no">1200</string>
+    <string name="profile_card_phone">Phone Number</string>
+    <string name="profile_card_mobile">(+1)5848475784</string>
+
+    <!-- bottom nav-->
+    <string name="bottom_home">Home</string>
+    <string name="bottom_cart">Cart</string>
+    <string name="bottom_favorite">Favorite</string>
+    <string name="bottom_profile">Profile</string>
+
+    <!--side nav -->
+    <string name="side_favorite">Favorite</string>
+    <string name="side_wallest">Wallets</string>
+    <string name="side_myorder">My order</string>
+    <string name="side_aboutus">About us</string>
+    <string name="side_privacy_policy">Privacy policy</string>
+    <string name="side_settings">Settings</string>
+    <string name="Log_out">Log out</string>
+
+    <!--toolbar nav-->
+    <string name="notification">Notification</string>
+
+    <!-- header-->
+    <string name="alex">Alex Nikiforov</string>
+    <string name="fashion">Fashion Designer</string>
+
+
 
 </resources>

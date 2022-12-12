@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="495dp"
-        android:text="@string/profileemail"
+        android:text="@string/profile_email"
         android:textColorHint="#80050505"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +104,7 @@
                 android:layout_marginEnd="52dp"
 
                 android:shadowColor="#000000"
-                android:text="@string/profileemail"
+                android:text="@string/profile_email"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +119,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:shadowColor="#D2EFE2E2"
-                android:text="@string/profilecardName"
+                android:text="@string/profile_card_Name"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -131,7 +131,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="56dp"
                 android:shadowColor="#D2EFE2E2"
-                android:text="@string/profilecardlocation"
+                android:text="@string/profile_card_location"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -144,7 +144,7 @@
                 android:layout_marginTop="128dp"
 
                 android:shadowColor="#D2EFE2E2"
-                android:text="@string/profilecardphone"
+                android:text="@string/profile_card_phone"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -156,7 +156,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="92dp"
                 android:shadowColor="#D2EFE2E2"
-                android:text="@string/profilecardzincode"
+                android:text="@string/profile_card_zincode"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -169,7 +169,7 @@
                 android:layout_marginEnd="52dp"
 
                 android:shadowColor="#000000"
-                android:text="@string/profilecardchrisharison"
+                android:text="@string/profile_card_chrisharison"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -185,7 +185,7 @@
                 android:layout_marginEnd="52dp"
 
                 android:shadowColor="#000000"
-                android:text="@string/profilecardno"
+                android:text="@string/profile_card_no"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +201,7 @@
                 android:layout_marginEnd="52dp"
 
                 android:shadowColor="#000000"
-                android:text="@string/profilecardmobile"
+                android:text="@string/profile_card_mobile"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +216,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/profilepersonalinformation"
+        android:text="@string/profile_personal_information"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

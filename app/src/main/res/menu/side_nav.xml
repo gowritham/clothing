@@ -3,32 +3,39 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:title="@string/favorite"
+            android:title="@string/side_favorite"
             android:id="@+id/favaurite"
             android:icon="@drawable/ic_baseline_favorite_24"/>
 
         <item
-            android:title="@string/wallets"
+            android:title="@string/side_wallest"
             android:id="@+id/wallest"
             android:icon="@drawable/ic_baseline_wallet_24"/>
 
         <item
-            android:title="@string/myorder"
+            android:title="@string/side_myorder"
             android:id="@+id/myorder"
             android:icon="@drawable/ic_baseline_shopping_bag_24"/>
 
         <item
-            android:title="@string/aboutus"
-            android:id="@+id/Adoutus"
+            android:title="@string/side_aboutus"
+            android:id="@+id/Aboutus"
             android:icon="@drawable/aboutus"/>
 
-        <item android:title="@string/privacypolicy"
+        <item android:title="@string/side_privacy_policy"
             android:id="@+id/privacypolicy"
             android:icon="@drawable/lock"/>
         <item
-            android:title="@string/settings"
+            android:title="@string/side_settings"
             android:id="@+id/settings"
             android:icon="@drawable/ic_baseline_settings_24"/>
+
+
+
+        <item
+            android:title="@string/Log_out"
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_logout_24"/>
 
     </group>
 
