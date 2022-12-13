@@ -104,6 +104,11 @@
         android:name="com.clothing.UI.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/productListingFragment"
+        android:name="com.clothing.UI.ProductListingFragment"
+        android:label="fragment_product_listing"
+        tools:layout="@layout/fragment_product_listing" />
 
 
 </navigation>

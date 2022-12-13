@@ -20,10 +20,10 @@ class HomeFragment : Fragment() {
 
         // Inflate the layout for this fragment
         val bottomNavigationView=view.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
+        replaceFragment(ProductListingFragment())
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.home -> replaceFragment(HomeFragment())
+                R.id.home -> replaceFragment(ProductListingFragment())
                 R.id.cart -> replaceFragment(MyCartFragment())
                 R.id.favorite -> replaceFragment(product_details())
                 R.id.profile -> replaceFragment(myprofileFragment())

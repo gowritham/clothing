@@ -117,6 +117,12 @@
     <string name="alex">Alex Nikiforov</string>
     <string name="fashion">Fashion Designer</string>
 
+    //Product Listing Page
+    <string name="category1">Dress</string>
+    <string name="category2">Shirt</string>
+    <string name="category3">T-shirt</string>
+    <string name="category4">Pants</string>
+    <string name="category5">Electronics</string>
 
 
 </resources>
