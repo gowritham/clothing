@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
             when(it.itemId){
                 R.id.home -> replaceFragment(ProductListingFragment())
                 R.id.cart -> replaceFragment(MyCartFragment())
-                R.id.favorite -> replaceFragment(product_details())
+                R.id.setting -> replaceFragment(SettingsFragment())
                 R.id.profile -> replaceFragment(myprofileFragment())
 
             }

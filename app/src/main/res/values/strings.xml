@@ -100,6 +100,7 @@
     <string name="bottom_cart">Cart</string>
     <string name="bottom_favorite">Favorite</string>
     <string name="bottom_profile">Profile</string>
+    <string name="bottom_settings">Settings</string>
 
     <!--side nav -->
     <string name="side_favorite">Favorite</string>
