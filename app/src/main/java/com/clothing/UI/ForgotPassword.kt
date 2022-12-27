@@ -1,5 +1,6 @@
 package com.clothing.UI
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -22,6 +23,7 @@ class ForgotPassword : Fragment() {
     lateinit var submitBtn:Button
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,8 +31,8 @@ class ForgotPassword : Fragment() {
 
         val view=inflater.inflate(R.layout.fragment_forgot_password, container, false)
 
-        emailContainer=view.findViewById(R.id.emailContainer)
-        userEmail=view.findViewById(R.id.userEmail)
+        emailContainer=view.findViewById(R.id.forgotEmailContainer)
+        userEmail=view.findViewById(R.id.forgotEmail)
         submitBtn=view.findViewById(R.id.submitBtn)
 
        submitBtn.setOnClickListener {
