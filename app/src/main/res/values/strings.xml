@@ -21,9 +21,9 @@
     <string name="button_3"><![CDATA[Get Started >>>]]></string>
     // login screen
 
-    <string name="sign_in">Log in</string>
+    <string name="sign_in">Log In</string>
     <string name="or">Or</string>
-    <string name="forget_password">Forgot Password?</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="log_dont" tools:ignore="StringEscaping">Don\'t have an account?</string>
 
 
