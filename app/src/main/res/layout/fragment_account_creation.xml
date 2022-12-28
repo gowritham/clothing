@@ -12,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/imageView3_start_margin"
-        android:layout_marginTop="@dimen/imageView3_top_margin"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="@dimen/imageView3_end_margin"
         android:src="@drawable/ic_vector2___copy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
 
     <TextView
@@ -63,53 +63,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/start_end_margin"
-        android:layout_marginTop="@dimen/top_margin1"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="@dimen/start_end_margin"
+        android:autofillHints=""
         android:background="@drawable/background_inputfiled_for_edittext"
-        android:hint="@string/email_address"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="@dimen/drawable_padding"
         android:elevation="5dp"
+        android:ems="5"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
         android:padding="@dimen/padding"
-        android:textSize="@dimen/text_size"
         android:textColor="@color/black"
         android:textColorHint="@color/grey"
-        android:ems="5"
-        android:inputType="textEmailAddress"
+        android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        android:autofillHints=""/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/start_end_margin"
-        android:layout_marginTop="@dimen/top_margin1"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="@dimen/start_end_margin"
+        android:autofillHints=""
         android:background="@drawable/background_inputfiled_for_edittext"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="@dimen/drawable_padding"
         android:elevation="5dp"
-        android:padding="@dimen/padding"
-        android:textSize="@dimen/text_size"
+        android:ems="5"
         android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding"
         android:textColor="@color/black"
         android:textColorHint="@color/grey"
-        android:ems="5"
-        android:inputType="textPassword"
+        android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        android:autofillHints=""/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/checkbox_start_margin"
-        android:layout_marginTop="@dimen/checkbox_end_margin"
+        android:layout_marginTop="18dp"
         android:buttonTint="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/textView2_start_margin"
-        android:layout_marginTop="@dimen/textView2_top_margin"
+        android:layout_marginTop="32dp"
         android:text="@string/text_term"
         android:textColor="@color/grey"
         android:textSize="@dimen/text_size"
@@ -131,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/textView3_start_margin"
-        android:layout_marginTop="@dimen/textView3_top_margin"
+        android:layout_marginTop="32dp"
         android:text="@string/text3"
         android:textColor="@color/black2"
         android:textSize="@dimen/text_size"
@@ -239,6 +239,36 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/nameHelper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <TextView
+        android:id="@+id/emailHelper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <TextView
+        android:id="@+id/passwordHelper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
