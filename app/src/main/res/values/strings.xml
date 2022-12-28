@@ -125,5 +125,10 @@
     <string name="category4">Pants</string>
     <string name="category5">Electronics</string>
 
+    //product Listing Page
+    <string name="explore">Explore</string>
+    <string name="best">best Outfits for you</string>
+    <string name="search">Search Items…</string>
+
 
 </resources>

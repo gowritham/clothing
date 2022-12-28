@@ -25,7 +25,7 @@ class ForgotPassword : Fragment() {
     lateinit var forgotHelperText : TextView
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,6 +40,7 @@ class ForgotPassword : Fragment() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
+            @SuppressLint("SetTextI18n")
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if(Patterns.EMAIL_ADDRESS.matcher(userEmail.text.toString()).matches())
                     forgotHelperText.isVisible=false
