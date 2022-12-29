@@ -109,6 +109,21 @@
         android:name="com.clothing.UI.ProductListingFragment"
         android:label="fragment_product_listing"
         tools:layout="@layout/fragment_product_listing" />
+    <fragment
+        android:id="@+id/walletsFragment"
+        android:name="com.clothing.UI.WalletsFragment"
+        android:label="fragment_wallets"
+        tools:layout="@layout/fragment_wallets" />
+    <fragment
+        android:id="@+id/myorderFragment"
+        android:name="com.clothing.UI.MyorderFragment"
+        android:label="fragment_myorder"
+        tools:layout="@layout/fragment_myorder" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.clothing.UI.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
 
 
 </navigation>
