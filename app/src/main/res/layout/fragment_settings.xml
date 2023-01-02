@@ -113,7 +113,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/subtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -131,7 +131,7 @@
         android:layout_marginTop="35dp"
         android:text="@string/settings_notification"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/subtract"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Switch
@@ -154,7 +154,7 @@
         android:layout_marginTop="35dp"
         android:src="@drawable/ic_settings_update"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/subtract"
         tools:ignore="ContentDescription" />
 
     <TextView

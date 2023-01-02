@@ -89,7 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_pr_name" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/subtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="237dp"
@@ -119,7 +119,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_card" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="292dp"
@@ -141,26 +141,26 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="7dp"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-            app:layout_constraintEnd_toEndOf="@+id/imageView9"
-            app:layout_constraintStart_toStartOf="@+id/imageView9"
-            app:layout_constraintTop_toTopOf="@+id/imageView9"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/subtract"
+            app:layout_constraintEnd_toEndOf="@+id/subtract"
+            app:layout_constraintStart_toStartOf="@+id/subtract"
+            app:layout_constraintTop_toTopOf="@+id/subtract"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="10dp"
-            android:layout_height="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="9dp"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-            app:layout_constraintEnd_toEndOf="@+id/imageView10"
-            app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="@+id/add"
+            app:layout_constraintEnd_toEndOf="@+id/add"
+            app:layout_constraintStart_toStartOf="@+id/add"
+            app:layout_constraintTop_toTopOf="@+id/add"
             tools:ignore="ContentDescription" />
 
 
@@ -250,7 +250,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_pr_name1" />
 
         <ImageView
-            android:id="@+id/imageView9_1"
+            android:id="@+id/subtract1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="237dp"
@@ -281,7 +281,7 @@
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/imageView10_1"
+            android:id="@+id/add1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="292dp"
@@ -303,26 +303,26 @@
             android:layout_marginTop="7dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="7dp"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView9_1"
-            app:layout_constraintEnd_toEndOf="@+id/imageView9_1"
-            app:layout_constraintStart_toStartOf="@+id/imageView9_1"
-            app:layout_constraintTop_toTopOf="@+id/imageView9_1"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/subtract1"
+            app:layout_constraintEnd_toEndOf="@+id/subtract1"
+            app:layout_constraintStart_toStartOf="@+id/subtract1"
+            app:layout_constraintTop_toTopOf="@+id/subtract1"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView12_1"
-            android:layout_width="10dp"
-            android:layout_height="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="9dp"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView10_1"
-            app:layout_constraintEnd_toEndOf="@+id/imageView10_1"
-            app:layout_constraintStart_toStartOf="@+id/imageView10_1"
-            app:layout_constraintTop_toTopOf="@+id/imageView10_1"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="@+id/add1"
+            app:layout_constraintEnd_toEndOf="@+id/add1"
+            app:layout_constraintStart_toStartOf="@+id/add1"
+            app:layout_constraintTop_toTopOf="@+id/add1"
             tools:ignore="ContentDescription" />
 
 
