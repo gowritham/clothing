@@ -3,14 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:title="@string/side_favorite"
+            android:title="@string/bottom_home"
             android:id="@+id/favaurite"
-            android:icon="@drawable/ic_baseline_favorite_24"/>
-
-        <item
-            android:title="@string/side_wallest"
-            android:id="@+id/wallest"
-            android:icon="@drawable/ic_baseline_wallet_24"/>
+            android:icon="@drawable/ic_baseline_home_24"/>
 
         <item
             android:title="@string/side_myorder"
@@ -22,15 +17,10 @@
             android:id="@+id/Aboutus"
             android:icon="@drawable/aboutus"/>
 
-        <item android:title="@string/side_privacy_policy"
-            android:id="@+id/privacypolicy"
-            android:icon="@drawable/lock"/>
         <item
-            android:title="@string/side_settings"
-            android:id="@+id/settings"
-            android:icon="@drawable/ic_baseline_settings_24"/>
-
-
+            android:title="@string/side_checkout"
+            android:id="@+id/checkOut"
+            android:icon="@drawable/ic_baseline_checkout_24"/>
 
         <item
             android:title="@string/Log_out"

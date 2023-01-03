@@ -56,7 +56,7 @@ class ForgotPassword : Fragment() {
        submitBtn.setOnClickListener {
            if (userEmail.text.toString().isEmpty()){
                forgotHelperText.isVisible=true
-               forgotHelperText.text = "Required"
+               forgotHelperText.text = "Email Required"
 
            } else {
                if (Patterns.EMAIL_ADDRESS.matcher(userEmail.text.toString()).matches()) {

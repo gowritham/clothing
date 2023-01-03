@@ -108,7 +108,7 @@
     <string name="side_myorder">My order</string>
     <string name="side_aboutus">About us</string>
     <string name="side_privacy_policy">Privacy policy</string>
-    <string name="side_settings">Settings</string>
+    <string name="side_checkout">Check Out</string>
     <string name="Log_out">Log out</string>
 
     <!--toolbar nav-->
@@ -135,5 +135,8 @@
     <string name="myOrder">MyOrder Fragment</string>
     <string name="wallet">Wallets Fragment</string>
 
+    //My Orders
+    <string name="date1">Today</string>
+    <string name="date2">20 Mar 2021</string>
 
 </resources>

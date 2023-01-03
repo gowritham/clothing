@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +7,12 @@
 
     <ImageView
         android:id="@+id/pd_imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/product_details_rectangular_image"
+        android:src="@drawable/ic_rectangle_370"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <ImageView
@@ -95,7 +94,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/pd_button"
         android:layout_width="205dp"
         android:layout_height="45dp"

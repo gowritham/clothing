@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.clothing.UI.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_product_details"
+            app:destination="@id/product_details" />
+    </fragment>
     <fragment
         android:id="@+id/myprofileFragment"
         android:name="com.clothing.UI.myprofileFragment"
@@ -110,20 +114,30 @@
         android:label="fragment_product_listing"
         tools:layout="@layout/fragment_product_listing" />
     <fragment
-        android:id="@+id/walletsFragment"
-        android:name="com.clothing.UI.WalletsFragment"
-        android:label="fragment_wallets"
-        tools:layout="@layout/fragment_wallets" />
-    <fragment
-        android:id="@+id/myorderFragment"
-        android:name="com.clothing.UI.MyorderFragment"
-        android:label="fragment_myorder"
-        tools:layout="@layout/fragment_myorder" />
-    <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.clothing.UI.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.clothing.UI.MyOrdersFragment"
+        android:label="fragment_my_orders"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/cancelledFragment"
+        android:name="com.clothing.UI.CancelledFragment"
+        android:label="fragment_cancelled"
+        tools:layout="@layout/fragment_cancelled" />
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="com.clothing.UI.CompletedFragment"
+        android:label="fragment_completed"
+        tools:layout="@layout/fragment_completed" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.clothing.UI.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" />
 
 
 </navigation>

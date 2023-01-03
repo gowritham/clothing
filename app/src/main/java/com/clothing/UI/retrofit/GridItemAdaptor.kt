@@ -11,15 +11,27 @@ import com.squareup.picasso.Picasso
 
 class GridItemAdaptor(val url : ArrayList<String>, val title : ArrayList<String>, val price : ArrayList<String>) :
     RecyclerView.Adapter<GridItemAdaptor.ViewHolder>() {
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    private lateinit var mListener : onItemClickListerner
+    interface onItemClickListerner{
+        fun onItemClick(position: Int)
+    }
+    fun setOnItemClickListener(listener : onItemClickListerner){
+        mListener = listener
+    }
+    class ViewHolder(itemView: View,listener: onItemClickListerner) : RecyclerView.ViewHolder(itemView) {
         val image : ImageView = itemView.findViewById(R.id.image)
         val tvTitle : TextView = itemView.findViewById(R.id.tv_title)
         val tvPrice : TextView = itemView.findViewById(R.id.tv_price)
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_item_view,parent,false)
-        return ViewHolder(view)
+        return ViewHolder(view,mListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

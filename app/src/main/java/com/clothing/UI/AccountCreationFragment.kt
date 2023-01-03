@@ -97,11 +97,11 @@ class AccountCreationFragment : Fragment() {
         button.setOnClickListener{
             if (userName.text.toString().isEmpty() && mailAddress.text.toString().isEmpty() && password.text.toString().isEmpty()){
                 nameHelper.isVisible=true
-                nameHelper.text="Required"
+                nameHelper.text="Name Required"
                 emailHelper.isVisible=true
-                emailHelper.text = "Required"
+                emailHelper.text = "Email Required"
                 passwordHelper.isVisible=true
-                passwordHelper.text="Required"
+                passwordHelper.text="Password Required"
             } else {
                 if (Patterns.EMAIL_ADDRESS.matcher(mailAddress.text.toString()).matches() && userName.text.toString().isNotEmpty() && password.text.length>=8 && chechbox.isChecked) {
                     Toast.makeText(activity, "Registered Successfully", Toast.LENGTH_LONG).show()

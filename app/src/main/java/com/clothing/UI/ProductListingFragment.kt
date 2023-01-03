@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.clothing.R
@@ -53,6 +54,12 @@ class ProductListingFragment : Fragment() {
         val gridLayout = GridLayoutManager(activity,2)
         gridItems?.layoutManager = gridLayout
         gridItems?.adapter = adaptor
+
+        adaptor?.setOnItemClickListener(object : GridItemAdaptor.onItemClickListerner{
+            override fun onItemClick(position: Int) {
+                findNavController().navigate(R.id.action_homeFragment_to_product_details)
+            }
+        })
 
 
     }

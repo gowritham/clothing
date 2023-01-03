@@ -80,9 +80,9 @@ class LoginFragment : Fragment() {
         log_in_button.setOnClickListener {
             if (etEmail.text.toString().isEmpty() && etPassword.text.toString().isEmpty()){
                 emailHelperText.isVisible=true
-                emailHelperText.text = "Required"
+                emailHelperText.text = "Email Required"
                 passwordHelperText.isVisible=true
-                passwordHelperText.text="Required"
+                passwordHelperText.text="Password Required"
             } else {
                 if (Patterns.EMAIL_ADDRESS.matcher(etEmail.text.toString()).matches() && etPassword.text.length>=8) {
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
