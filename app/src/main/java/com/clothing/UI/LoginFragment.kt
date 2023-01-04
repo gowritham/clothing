@@ -48,7 +48,7 @@ class LoginFragment : Fragment() {
 
                 else{
                     emailHelperText.isVisible=true
-                    emailHelperText.text="Invalid Email"
+                    emailHelperText.text="Invalid Email (Ex: xyz@gmail.com)"
                 }
             }
             override fun afterTextChanged(s: Editable?) {
@@ -86,8 +86,6 @@ class LoginFragment : Fragment() {
             } else {
                 if (Patterns.EMAIL_ADDRESS.matcher(etEmail.text.toString()).matches() && etPassword.text.length>=8) {
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                } else {
-                    Toast.makeText(activity, "Failure", Toast.LENGTH_LONG).show()
                 }
             }
 

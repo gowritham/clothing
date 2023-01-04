@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +26,7 @@ class ProductListingFragment : Fragment() {
     var titleList : ArrayList<String>? = arrayListOf()
     var priceList : ArrayList<String>? = arrayListOf()
     var gridItems : RecyclerView? = null
+    lateinit var progressBar: ProgressBar
 
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(
@@ -34,9 +36,12 @@ class ProductListingFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_product_listing, container, false)
         gridItems = view.findViewById(R.id.gridItems)
+        progressBar = view.findViewById(R.id.progressBar)
+        progressBar.visibility = View.VISIBLE
         val productsApi = RetrofitHelper.getInstance().create(ProductsApi::class.java)
         GlobalScope.launch(Dispatchers.Main) {
             val result = productsApi.getProducts()
+            progressBar.visibility = View.GONE
             Log.d("data", result.body().toString())
             getData(result)
         }

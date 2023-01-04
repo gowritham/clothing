@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import com.clothing.R
 
 class MyCartFragment : Fragment() {
@@ -20,6 +22,8 @@ class MyCartFragment : Fragment() {
     lateinit var totalPrice : TextView
     lateinit var price1 : TextView
     lateinit var price2 : TextView
+    lateinit var card1 :  ConstraintLayout
+    lateinit var card2 : ConstraintLayout
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -37,6 +41,8 @@ class MyCartFragment : Fragment() {
         totalPrice = view.findViewById(R.id.tv_total_price)
         price1 = view.findViewById(R.id.tv_price)
         price2 = view.findViewById(R.id.tv_price1)
+        card1 = view.findViewById(R.id.card1)
+        card2 = view.findViewById(R.id.card2)
         var product1 = tvItemCount.text.toString().toInt()
         var product2 = tvItemCount1.text.toString().toInt()
         var total = totalPrice.text.toString().toInt()
@@ -53,6 +59,9 @@ class MyCartFragment : Fragment() {
                 totalPrice.text = (total - price1.text.toString().toInt()).toString()
                 total -= price1.text.toString().toInt()
             }
+            else if(product1 == 0){
+                card1.isVisible=false
+            }
         }
         add1.setOnClickListener {
             tvItemCount1.text = (product2 + 1).toString()
@@ -66,6 +75,8 @@ class MyCartFragment : Fragment() {
                 product2 -= 1
                 totalPrice.text = (total - price2.text.toString().toInt()).toString()
                 total -= price2.text.toString().toInt()
+            } else if(product2 == 0){
+                card2.isVisible=false
             }
         }
         return view
