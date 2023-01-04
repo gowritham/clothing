@@ -27,7 +27,7 @@
         android:layout_marginStart="25dp"
         android:textColor="@color/black"
         android:layout_marginTop="41dp"
-        android:text="Nice to meet you"
+        android:text="@string/aboutusMiniHeading"
         android:textAlignment="gravity"
         android:textSize="20sp"
         android:textStyle="bold"

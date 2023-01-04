@@ -142,8 +142,24 @@
 
     <string name="loading">Loading…</string>
 
+    //About Us
+    <string name="aboutusMiniHeading">Nice to meet you</string>
     <string name="Detailed">We are a fashion destination for the contemporary Indian who seeks authentic brand experiences. As the official online platform for International brands like U.S. Polo Assn., Sephora, Arrow, Tommy Hilfiger, Calvin Klein, Aéropostale, Ed Hardy, and leading Indian brands like Flying Machine, AD by Arvind, Ruggers, Colt, Shuffl, Anahi and Karigari amongst many others, we not only showcase the largest width of merchandise for these brands but also offer the freshest in-season products.</string>
     <string name="google">open<a href ="https://www.google.com/"> google</a></string>
     <string name="head">C l o t h i n g</string>
+
+    //Check out
+    <string name="zero">0</string>
+    <string name="delAddress">Delivery Address</string>
+    <string name="addressNumber1">(342) 4522019</string>
+    <string name="addressCity1">220 Newyork</string>
+    <string name="addressNumber2">(242) 4522019</string>
+    <string name="addressCity2">220 Caifornia</string>
+    <string name="office">Office</string>
+    <string name="billingInfo">Billing Information</string>
+    <string name="deliveryFee">Delivery Fee :</string>
+    <string name="subtotal">Subtotal :</string>
+    <string name="totalPrice1">Total :</string>
+
 
 </resources>
