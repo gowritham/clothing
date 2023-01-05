@@ -63,7 +63,7 @@ class LoginFragment : Fragment() {
                 val pwdText=etPassword.text.toString()
                 if(pwdText.length<8) {
                     passwordHelperText.isVisible = true
-                    passwordHelperText.text = "Minimum 8"
+                    passwordHelperText.text = "Minimum 8 characters"
                 }
                 else{
                     passwordHelperText.isVisible = false
