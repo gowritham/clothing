@@ -30,7 +30,7 @@
     <!-- Signup_page-->
     <string name="sign_up">Sign Up</string>
 
-    <string name="name">Name</string>
+    <string name="name">User Name</string>
     <string name="email_address">Sample@gmail.com</string>
     <string name="password">Password</string>
 

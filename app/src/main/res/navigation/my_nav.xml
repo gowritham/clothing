@@ -95,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/product_details"
-        android:name="com.clothing.UI.product_details"
+        android:name="com.clothing.UI.ProductDetails"
         android:label="fragment_product_details2"
         tools:layout="@layout/fragment_product_details2" />
     <fragment

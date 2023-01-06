@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -62,7 +63,12 @@ class ProductListingFragment : Fragment() {
 
         adaptor?.setOnItemClickListener(object : GridItemAdaptor.onItemClickListerner{
             override fun onItemClick(position: Int) {
-                findNavController().navigate(R.id.action_homeFragment_to_product_details)
+                val bundle = Bundle()
+                bundle.putString("image",result.body()?.get(position)?.image)
+                bundle.putString("title",result.body()?.get(position)?.title)
+                bundle.putString("price",result.body()?.get(position)?.price.toString())
+                bundle.putString("description",result.body()?.get(position)?.description)
+                view?.let { Navigation.findNavController(it).navigate(R.id.product_details,bundle) }
             }
         })
 
