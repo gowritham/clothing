@@ -1,10 +1,13 @@
 package com.clothing.UI
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
@@ -17,6 +20,8 @@ import com.google.android.material.navigation.NavigationView
 class HomeFragment : Fragment() {
     lateinit var drawerLayout: DrawerLayout
     lateinit var appBar : MaterialToolbar
+    var shared : String = "sharedPreference"
+    @SuppressLint("ApplySharedPref")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -111,7 +116,16 @@ class HomeFragment : Fragment() {
                     appBar.setNavigationIcon(R.drawable.ic_back_icon)
                     appBar.setTitle(R.string.side_checkout)
                 }
-                R.id.logout -> findNavController().navigate(R.id.loginFragment)
+                R.id.logout -> {
+                    val appContext = requireContext().applicationContext
+                    val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    editor.putBoolean("islogin",false)
+                    editor.apply()
+                    editor.clear().commit()
+                    findNavController().navigate(R.id.loginFragment)
+                    Toast.makeText(activity,"Logged out Successful",Toast.LENGTH_SHORT).show()
+                }
             }
             true
         }

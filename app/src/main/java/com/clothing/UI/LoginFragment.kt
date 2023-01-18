@@ -1,6 +1,7 @@
 package com.clothing.UI
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -27,6 +28,7 @@ class LoginFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private lateinit var emailHelperText: TextView
     private lateinit var passwordHelperText: TextView
+    var shared : String = "sharedPreference"
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -120,6 +122,11 @@ class LoginFragment : Fragment() {
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<DataModal?>, response: Response<DataModal?>) {
                 if (response.code() == 200) {
+                    val appContext = requireContext().applicationContext
+                    val prefs = appContext.getSharedPreferences(shared,Context.MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    editor.putBoolean("islogin",true)
+                    editor.apply()
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     //Toast.makeText(activity, "Data added to API", Toast.LENGTH_SHORT).show()
                 } else {

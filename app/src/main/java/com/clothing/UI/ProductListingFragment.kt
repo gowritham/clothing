@@ -39,12 +39,14 @@ class ProductListingFragment : Fragment() {
         gridItems = view.findViewById(R.id.gridItems)
         progressBar = view.findViewById(R.id.progressBar)
         progressBar.visibility = View.VISIBLE
-        val productsApi = RetrofitHelper.getInstance().create(ProductsApi::class.java)
+        val productsApi = RetrofitHelper.getInstance()?.create(ProductsApi::class.java)
         GlobalScope.launch(Dispatchers.Main) {
-            val result = productsApi.getProducts()
+            val result = productsApi?.getProducts()
             progressBar.visibility = View.GONE
-            Log.d("data", result.body().toString())
-            getData(result)
+            Log.d("data", result?.body().toString())
+            if (result != null) {
+                getData(result)
+            }
         }
         return view
     }
@@ -64,10 +66,11 @@ class ProductListingFragment : Fragment() {
         adaptor?.setOnItemClickListener(object : GridItemAdaptor.onItemClickListerner{
             override fun onItemClick(position: Int) {
                 val bundle = Bundle()
-                bundle.putString("image",result.body()?.get(position)?.image)
+                /*bundle.putString("image",result.body()?.get(position)?.image)
                 bundle.putString("title",result.body()?.get(position)?.title)
                 bundle.putString("price",result.body()?.get(position)?.price.toString())
-                bundle.putString("description",result.body()?.get(position)?.description)
+                bundle.putString("description",result.body()?.get(position)?.description)*/
+                bundle.putString("id",result.body()?.get(position)?.id.toString())
                 view?.let { Navigation.findNavController(it).navigate(R.id.product_details,bundle) }
             }
         })
