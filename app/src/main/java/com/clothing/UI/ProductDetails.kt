@@ -68,7 +68,7 @@ class ProductDetails : Fragment() {
 
         }
         addToCart.setOnClickListener {
-            Toast.makeText(activity,"$id",Toast.LENGTH_SHORT).show()
+            //Toast.makeText(activity,"$id",Toast.LENGTH_SHORT).show()
         }
 
         /*Picasso.get().load(requireArguments().getString("image")).into(pdImageView3)
