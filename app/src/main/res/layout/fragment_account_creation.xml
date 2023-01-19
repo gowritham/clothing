@@ -166,7 +166,7 @@
         tools:ignore="ContentDescription"/>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/textView5_start_margin"
@@ -184,7 +184,7 @@
         android:layout_marginStart="@dimen/imageView13_start_margin"
         android:layout_marginTop="@dimen/imageView13_top_margin"
         android:layout_marginEnd="@dimen/imageView13_end_margin"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textViewOr"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:srcCompat="@drawable/ic_line_32"
         tools:ignore="ContentDescription"/>

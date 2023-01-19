@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.cardview.widget.CardView
 import androidx.navigation.fragment.findNavController
@@ -65,6 +66,9 @@ class ProductDetails : Fragment() {
             productDetailsPrice.text = result?.body()?.price.toString()
             productDetailsDescription.text = result?.body()?.description
 
+        }
+        addToCart.setOnClickListener {
+            Toast.makeText(activity,"$id",Toast.LENGTH_SHORT).show()
         }
 
         /*Picasso.get().load(requireArguments().getString("image")).into(pdImageView3)

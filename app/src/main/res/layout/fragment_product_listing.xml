@@ -65,120 +65,33 @@
                 android:layout_marginStart="10dp"
                 android:textColor="@color/black" />
 
-            <HorizontalScrollView
-                android:id="@+id/scroll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="62dp"
-                tools:layout_editor_absoluteY="14dp"
-                tools:ignore="MissingConstraints">
-
-
-
                 <LinearLayout
                     android:id="@+id/linearLayout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     tools:ignore="MissingConstraints"
+                    android:layout_marginBottom="20dp"
                     tools:layout_editor_absoluteX="7dp"
                     tools:layout_editor_absoluteY="7dp">
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="65dp"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardElevation="20dp"
-                        app:cardCornerRadius="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/category1"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="65dp"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardElevation="20dp"
-                        app:cardCornerRadius="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/category2"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="65dp"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardElevation="20dp"
-                        app:cardCornerRadius="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/category3"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="65dp"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardElevation="20dp"
-                        app:cardCornerRadius="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/category4"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="65dp"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardElevation="20dp"
-                        app:cardCornerRadius="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/category5"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                    </com.google.android.material.card.MaterialCardView>
-
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </LinearLayout>
-            </HorizontalScrollView>
+
 
 
 
@@ -187,7 +100,7 @@
                 android:id="@+id/gridItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/scroll"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                 tools:layout_editor_absoluteX="16dp" />
 
             <ProgressBar

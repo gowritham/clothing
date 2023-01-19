@@ -14,4 +14,6 @@ interface ProductsApi {
     fun postData(@Body dataModal: DataModal?): Call<DataModal?>?
     @GET("/products/{id}")
     suspend fun eachProduct(@Path("id") id : String) : Response<EachDataItem>
+    @GET("/products/categories")
+    suspend fun getCategoriesData():Response<ResposeCategoryData>
 }

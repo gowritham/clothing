@@ -126,6 +126,7 @@ class LoginFragment : Fragment() {
                     val prefs = appContext.getSharedPreferences(shared,Context.MODE_PRIVATE)
                     val editor = prefs.edit()
                     editor.putBoolean("islogin",true)
+                    editor.putString("USERNAME",username)
                     editor.apply()
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     //Toast.makeText(activity, "Data added to API", Toast.LENGTH_SHORT).show()
