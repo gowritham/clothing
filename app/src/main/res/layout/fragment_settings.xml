@@ -158,7 +158,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/profileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -176,7 +176,7 @@
         android:layout_marginTop="32dp"
         android:thumbTint="@color/white"
         android:trackTint="#F67952"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/profileEmail"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
         tools:ignore="UnusedAttribute,UseSwitchCompatOrMaterialXml" />
 

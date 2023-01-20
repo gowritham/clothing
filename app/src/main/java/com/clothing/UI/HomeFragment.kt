@@ -30,6 +30,8 @@ class HomeFragment : Fragment() {
         val view =inflater.inflate(R.layout.fragment_home, container, false)
 
         // Inflate the layout for this fragment
+        val appContext = requireContext().applicationContext
+        val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
         drawerLayout = view.findViewById(R.id.drawerlayout)
         appBar = view.findViewById(R.id.appBar)
         val navigationView = view.findViewById<NavigationView>(R.id.nav_view)
@@ -38,6 +40,9 @@ class HomeFragment : Fragment() {
         appBar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
         }
+        val header=navigationView.getHeaderView(0)
+        val textH=header.findViewById<TextView>(R.id.headerName)
+        textH.text=prefs.getString("USERNAME","")
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> {
@@ -118,9 +123,9 @@ class HomeFragment : Fragment() {
                     appBar.setTitle(R.string.side_checkout)
                 }
                 R.id.logout -> {
-                    val appContext = requireContext().applicationContext
-                    val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
-                    val editor = prefs.edit()
+                    val appContext1 = requireContext().applicationContext
+                    val pref = appContext1.getSharedPreferences(shared, Context.MODE_PRIVATE)
+                    val editor = pref.edit()
                     editor.putBoolean("islogin",false)
                     editor.apply()
                     editor.clear().commit()

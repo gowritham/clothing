@@ -16,4 +16,6 @@ interface ProductsApi {
     suspend fun eachProduct(@Path("id") id : String) : Response<EachDataItem>
     @GET("/products/categories")
     suspend fun getCategoriesData():Response<ResposeCategoryData>
+    @GET("users")
+    fun getDate(): Call<List<AllUsersItem>>
 }

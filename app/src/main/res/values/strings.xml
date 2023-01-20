@@ -89,8 +89,8 @@
     <string name="profile_card_Name">Name</string>
     <string name="profile_card_chrisharison">Chris Harison</string>
     <string name="profile_card_email">chris@gmail.com</string>
-    <string name="profile_card_location">San Diego</string>
-    <string name="profile_card_zincode">Zin Code</string>
+    <string name="profile_card_location">Email</string>
+    <string name="profile_card_zipcode">Zip Code</string>
     <string name="profile_card_no">1200</string>
     <string name="profile_card_phone">Phone Number</string>
     <string name="profile_card_mobile">(+1)5848475784</string>

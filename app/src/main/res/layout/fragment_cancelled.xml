@@ -47,7 +47,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/profileUserName"
+                android:id="@+id/profileName"
                 android:layout_width="86dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="117dp"
@@ -60,7 +60,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/profileEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="116dp"
