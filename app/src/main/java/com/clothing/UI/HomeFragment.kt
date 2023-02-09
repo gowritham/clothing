@@ -2,6 +2,7 @@ package com.clothing.UI
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.NotificationCompat.getColor
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getColor
+import androidx.core.content.res.ResourcesCompat.getColor
+import androidx.core.graphics.green
 import androidx.core.view.GravityCompat
 import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
@@ -20,6 +26,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.color.MaterialColors.getColor
 import com.google.android.material.navigation.NavigationView
 
 
@@ -63,6 +70,7 @@ class HomeFragment : Fragment() {
         }
         val counter:Int=prefs.getInt("count",0)
         bottomNavigationView.getOrCreateBadge(R.id.cart).number = counter
+        bottomNavigationView.getOrCreateBadge(R.id.cart).backgroundColor = Color.parseColor("#F67952")
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> {
