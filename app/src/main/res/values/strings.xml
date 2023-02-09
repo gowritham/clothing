@@ -160,6 +160,16 @@
     <string name="deliveryFee">Delivery Fee :</string>
     <string name="subtotal">Subtotal :</string>
     <string name="totalPrice1">Total :</string>
+    <string name="delivary">99</string>
+    <string name="order">Place Order</string>
+
+    //Facebook
+
+    <string name="facebook_app_id">1195625994399072</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
 
 
 </resources>

@@ -9,6 +9,8 @@ import retrofit2.http.Path
 
 interface ProductsApi {
     @GET("/products")
+    suspend fun getProducts1() : Response<List<ProductsDataItem>>
+    @GET("/products")
     suspend fun getProducts() : Response<ProductsData>
     @POST("login")
     fun postData(@Body dataModal: DataModal?): Call<DataModal?>?
@@ -18,4 +20,6 @@ interface ProductsApi {
     suspend fun getCategoriesData():Response<ResposeCategoryData>
     @GET("users")
     fun getDate(): Call<List<AllUsersItem>>
+    @POST("/users")
+    fun registerPost(@Body data : RegisterResponse) : Call<RegisterResponse>
 }

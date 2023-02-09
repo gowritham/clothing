@@ -1,6 +1,7 @@
 package com.clothing.UI
 
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -18,6 +19,8 @@ import com.clothing.R
 import com.clothing.UI.retrofit.ProductsApi
 import com.clothing.UI.retrofit.RetrofitHelper
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
@@ -27,6 +30,13 @@ import kotlinx.coroutines.launch
 
 class ProductDetails : Fragment() {
     lateinit var id : String
+    var shared : String = "sharedPreference"
+    lateinit var title : String
+    lateinit var price : String
+    lateinit var image : String
+    var count : Int = 0
+
+
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +53,9 @@ class ProductDetails : Fragment() {
         val t = view.findViewById<TextView>(R.id.t)
         val card = view.findViewById<CardView>(R.id.cardViewss)
         val bar = view.findViewById<MaterialToolbar>(R.id.bar)
+        val appContext = requireContext().applicationContext
+        val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
+        val editor = prefs.edit()
         id = requireArguments().getString("id").toString()
         pbar.visibility = View.VISIBLE
         t.visibility = View.VISIBLE
@@ -65,11 +78,34 @@ class ProductDetails : Fragment() {
             productDetailsTitle.text = result?.body()?.title
             productDetailsPrice.text = result?.body()?.price.toString()
             productDetailsDescription.text = result?.body()?.description
+            title = result?.body()?.title.toString()
+            price = result?.body()?.price.toString()
+            image = result?.body()?.image.toString()
+
 
         }
         addToCart.setOnClickListener {
-            //Toast.makeText(activity,"$id",Toast.LENGTH_SHORT).show()
+            //bottom = view.findViewById(R.id.bottomNavigationView)
+            //updateBadgeCount(count)
+            /*val counter1 = prefs.getInt("count",0)
+            var start : Int = 0
+            while (start<counter1){
+                titleList.add(prefs.getString("titles"+start,"Unknown").toString())
+                start += 1
+            }*/
+
+                Toast.makeText(activity,"Item Added to Cart",Toast.LENGTH_SHORT).show()
+                val counter:Int=prefs.getInt("count",0)
+                editor.putInt("id",id.toInt())
+                editor.putString("Title"+counter,title)
+                editor.putString("Price"+counter,price)
+                editor.putString("Image"+counter,image)
+                editor.putInt("count",counter+1)
+                editor.apply()
+
+
         }
+
 
         /*Picasso.get().load(requireArguments().getString("image")).into(pdImageView3)
         productDetailsTitle.setText(requireArguments().getString("title"))
@@ -78,4 +114,11 @@ class ProductDetails : Fragment() {
         return view
 
     }
+    /*private fun updateBadgeCount(count: Int=1) {
+        val itemView: BottomNavigationItemView? = bottom.getChildAt(1) as? BottomNavigationItemView
+        notificationsBadges = LayoutInflater.from(this).inflate(R.layout.card_badge, itemView, true)
+        notificationsBadges?.textView.text = count.toString()
+        bottom?.addView(notificationsBadges)
+        this.count += 1
+    }*/
 }

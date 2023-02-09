@@ -238,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="18dp"
-                android:text="@string/zero"
+                android:text="@string/delivary"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -278,7 +278,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/background"
-        android:text="@string/side_checkout"
+        android:text="@string/order"
 
         android:textAllCaps="false"
         android:textColor="@color/white"

@@ -2,6 +2,7 @@ package com.clothing.UI
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
@@ -18,6 +20,12 @@ import androidx.navigation.fragment.findNavController
 import com.clothing.R
 import com.clothing.UI.retrofit.DataModal
 import com.clothing.UI.retrofit.ProductsApi
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +37,8 @@ class LoginFragment : Fragment() {
     private lateinit var emailHelperText: TextView
     private lateinit var passwordHelperText: TextView
     var shared : String = "sharedPreference"
+    private lateinit var gso: GoogleSignInOptions
+    private lateinit var gsc: GoogleSignInClient
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,8 +53,21 @@ class LoginFragment : Fragment() {
         val signUp = view.findViewById<TextView>(R.id.tv_login_signup)
         val forgotPassword = view.findViewById<TextView>(R.id.et_forget)
         val log_in_button = view.findViewById<AppCompatButton>(R.id.login_button)
+        val google = view.findViewById<ImageView>(R.id.login_google_icon)
+        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
+        gsc = activity?.let { GoogleSignIn.getClient(it,gso) }!!
+        val account: GoogleSignInAccount? = GoogleSignIn.getLastSignedInAccount(requireActivity())
+        if(account != null){
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }
+        google.setOnClickListener {
+            gotoSignIn()
+        }
         emailHelperText.isVisible = false
         passwordHelperText.isVisible = false
+
         etUsername.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -104,6 +127,28 @@ class LoginFragment : Fragment() {
         }
 
         return view
+    }
+
+    private fun gotoSignIn() {
+        val signInFragment = gsc.signInIntent
+        startActivityForResult(signInFragment,1000)
+    }
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1000){
+            val task: Task<GoogleSignInAccount> = GoogleSignIn
+                .getSignedInAccountFromIntent(data)
+            try {
+                task.getResult(ApiException::class.java)
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+
+            }
+            catch(e:java.lang.Exception){
+                Toast.makeText(activity,e.message,Toast.LENGTH_SHORT).show()
+
+            }
+        }
     }
 
     private fun postData(username: String, password: String) {

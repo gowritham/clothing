@@ -10,9 +10,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import com.clothing.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -22,6 +27,8 @@ class HomeFragment : Fragment() {
     lateinit var drawerLayout: DrawerLayout
     lateinit var appBar : MaterialToolbar
     var shared : String = "sharedPreference"
+    private lateinit var gso: GoogleSignInOptions
+    private lateinit var gsc: GoogleSignInClient
     @SuppressLint("ApplySharedPref")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +37,14 @@ class HomeFragment : Fragment() {
         val view =inflater.inflate(R.layout.fragment_home, container, false)
 
         // Inflate the layout for this fragment
+
+        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
+        gsc = activity?.let { GoogleSignIn.getClient(it,gso) }!!
+        val account: GoogleSignInAccount? = GoogleSignIn.getLastSignedInAccount(requireActivity())
+
+
         val appContext = requireContext().applicationContext
         val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
         drawerLayout = view.findViewById(R.id.drawerlayout)
@@ -43,6 +58,11 @@ class HomeFragment : Fragment() {
         val header=navigationView.getHeaderView(0)
         val textH=header.findViewById<TextView>(R.id.headerName)
         textH.text=prefs.getString("USERNAME","")
+        if(account != null){
+            textH.text=account.displayName
+        }
+        val counter:Int=prefs.getInt("count",0)
+        bottomNavigationView.getOrCreateBadge(R.id.cart).number = counter
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> {
@@ -101,26 +121,31 @@ class HomeFragment : Fragment() {
                 R.id.favaurite -> {
                     replaceFragment(ProductListingFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
-                    //appBar.setNavigationIcon(R.drawable.ic_back_icon)
+                    appBar.setNavigationIcon(R.drawable.menu)
                     appBar.setTitle(R.string.app_name)
+                    bottomNavigationView.isVisible = true
+
                 }
                 R.id.myorder -> {
                     replaceFragment(MyOrdersFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     appBar.setNavigationIcon(R.drawable.ic_back_icon)
                     appBar.setTitle(R.string.side_myorder)
+                    bottomNavigationView.isVisible = false
                 }
                 R.id.Aboutus -> {
                     replaceFragment(AboutUsFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     appBar.setNavigationIcon(R.drawable.ic_back_icon)
                     appBar.setTitle(R.string.side_aboutus)
+                    bottomNavigationView.isVisible = false
                 }
                 R.id.checkOut -> {
                     replaceFragment(CheckOutFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     appBar.setNavigationIcon(R.drawable.ic_back_icon)
                     appBar.setTitle(R.string.side_checkout)
+                    bottomNavigationView.isVisible = false
                 }
                 R.id.logout -> {
                     val appContext1 = requireContext().applicationContext
@@ -130,6 +155,9 @@ class HomeFragment : Fragment() {
                     editor.apply()
                     editor.clear().commit()
                     findNavController().navigate(R.id.loginFragment)
+                    gsc.signOut().addOnSuccessListener {
+                        findNavController().navigate(R.id.loginFragment)
+                    }
                     Toast.makeText(activity,"Logged out Successful",Toast.LENGTH_SHORT).show()
                 }
             }

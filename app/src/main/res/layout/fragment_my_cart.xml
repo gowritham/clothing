@@ -4,331 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/card1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="119dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/iv_card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="21dp"
-            android:src="@drawable/ic_card"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/iv_bg_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="235dp"
-            android:layout_marginBottom="11dp"
-            android:src="@drawable/ic_iv_bg_product"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="3dp"
-            android:src="@drawable/ic_tshirt"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_bg_product"
-            app:layout_constraintEnd_toEndOf="@+id/iv_bg_product"
-            app:layout_constraintStart_toStartOf="@+id/iv_bg_product"
-            app:layout_constraintTop_toTopOf="@+id/iv_bg_product"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tv_pr_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="117dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="51dp"
-            android:text="@string/cart_product_text1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
-
-        <TextView
-            android:id="@+id/tv_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="117dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="176dp"
-            android:layout_marginBottom="22dp"
-            android:text="@string/cart_product_price1"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pr_name" />
-
-        <ImageView
-            android:id="@+id/subtract"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="237dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="69dp"
-            android:layout_marginBottom="35dp"
-            android:src="@drawable/ic_quantity_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tv_item_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="274dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="53dp"
-            android:layout_marginBottom="36dp"
-            android:text="@string/product_quantity1"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card" />
-
-        <ImageView
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="292dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="35dp"
-            android:src="@drawable/ic_quantity_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card"
-            app:layout_constraintStart_toStartOf="@+id/iv_card"
-            app:layout_constraintTop_toTopOf="@+id/iv_card"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="7dp"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/subtract"
-            app:layout_constraintEnd_toEndOf="@+id/subtract"
-            app:layout_constraintStart_toStartOf="@+id/subtract"
-            app:layout_constraintTop_toTopOf="@+id/subtract"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="9dp"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="@+id/add"
-            app:layout_constraintEnd_toEndOf="@+id/add"
-            app:layout_constraintStart_toStartOf="@+id/add"
-            app:layout_constraintTop_toTopOf="@+id/add"
-            tools:ignore="ContentDescription" />
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/card2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/iv_card1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="21dp"
-            android:src="@drawable/ic_card"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/iv_bg_product1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="235dp"
-            android:layout_marginBottom="11dp"
-            android:src="@drawable/ic_iv_bg_product"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView8_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="3dp"
-            android:src="@drawable/ic_tshirt"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_bg_product1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_bg_product1"
-            app:layout_constraintStart_toStartOf="@+id/iv_bg_product1"
-            app:layout_constraintTop_toTopOf="@+id/iv_bg_product1"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tv_pr_name1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="117dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="51dp"
-            android:text="@string/cart_product_text2"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1" />
-
-        <TextView
-            android:id="@+id/tv_price1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="117dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="176dp"
-            android:layout_marginBottom="22dp"
-            android:text="@string/cart_product_price2"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pr_name1" />
-
-        <ImageView
-            android:id="@+id/subtract1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="237dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="69dp"
-            android:layout_marginBottom="35dp"
-            android:src="@drawable/ic_quantity_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tv_item_count1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="274dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="53dp"
-            android:layout_marginBottom="36dp"
-            android:text="@string/product_quantity2"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/add1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="292dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="35dp"
-            android:src="@drawable/ic_quantity_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_card1"
-            app:layout_constraintEnd_toEndOf="@+id/iv_card1"
-            app:layout_constraintStart_toStartOf="@+id/iv_card1"
-            app:layout_constraintTop_toTopOf="@+id/iv_card1"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView11_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="7dp"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/subtract1"
-            app:layout_constraintEnd_toEndOf="@+id/subtract1"
-            app:layout_constraintStart_toStartOf="@+id/subtract1"
-            app:layout_constraintTop_toTopOf="@+id/subtract1"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView12_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="9dp"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="@+id/add1"
-            app:layout_constraintEnd_toEndOf="@+id/add1"
-            app:layout_constraintStart_toStartOf="@+id/add1"
-            app:layout_constraintTop_toTopOf="@+id/add1"
-            tools:ignore="ContentDescription" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_cart1"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subtotal"
+        app:layout_constraintTop_toBottomOf="@+id/pro"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="129dp" />
 
 
     <TextView
@@ -355,7 +42,7 @@
         android:layout_marginTop="500dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="112dp"
-        android:text="@string/total_price"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -380,5 +67,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emptyCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart is Empty"
+        android:textSize="25dp"
+        android:color="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

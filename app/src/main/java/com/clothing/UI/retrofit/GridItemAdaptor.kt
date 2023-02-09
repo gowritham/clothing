@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.clothing.R
 import com.squareup.picasso.Picasso
 
-class GridItemAdaptor(val url : ArrayList<String>, val title : ArrayList<String>, val price : ArrayList<String>) :
+class GridItemAdaptor(val cartList : List<ProductsDataItem>) :
     RecyclerView.Adapter<GridItemAdaptor.ViewHolder>() {
     private lateinit var mListener : onItemClickListerner
     interface onItemClickListerner{
@@ -29,18 +29,19 @@ class GridItemAdaptor(val url : ArrayList<String>, val title : ArrayList<String>
         }
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_item_view,parent,false)
         return ViewHolder(view,mListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvTitle.text = title[position]
-        holder.tvPrice.text = price[position]
-        Picasso.get().load(url[position]).into(holder.image)
+        holder.tvTitle.text = cartList.get(position).title
+        holder.tvPrice.text = cartList.get(position).price.toString()
+        Picasso.get().load(cartList.get(position).image).into(holder.image)
     }
 
     override fun getItemCount(): Int {
-        return title.size
+        return cartList.size
     }
 }

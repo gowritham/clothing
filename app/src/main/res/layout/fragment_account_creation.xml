@@ -190,7 +190,7 @@
         tools:ignore="ContentDescription"/>
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/register_facebook_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/imageView14_start_margin"
@@ -201,7 +201,7 @@
         tools:ignore="ContentDescription"/>
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/register_google_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/imageView15_start_margin"
@@ -217,28 +217,28 @@
         android:id="@+id/profileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/textView6_start_margin"
-        android:layout_marginTop="@dimen/textView6_top_margin"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="30dp"
         android:text="@string/text2"
         android:textColor="@color/grey"
         android:textSize="@dimen/text_size"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+        app:layout_constraintTop_toBottomOf="@+id/register_facebook_icon" />
 
     <TextView
         android:id="@+id/login_register_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/textView7_start_margin"
-        android:layout_marginTop="@dimen/textView7_top_margin"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="@dimen/textView7_end_margin"
         android:text="@string/log_in"
         android:textColor="@color/black2"
         android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toEndOf="@+id/profileEmail"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintTop_toBottomOf="@+id/register_google_icon" />
 
     <TextView
         android:id="@+id/nameHelper"
@@ -269,6 +269,16 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_marginBottom="30dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
