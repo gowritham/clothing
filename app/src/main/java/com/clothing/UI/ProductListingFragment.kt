@@ -1,6 +1,5 @@
 package com.clothing.UI
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -71,7 +70,7 @@ class ProductListingFragment : Fragment() {
             if (result != null) {
                 getData(result)
             }
-            getCategoryData(categoryResult)
+            getCategoryData(categoryResult,result)
         }
         return view
     }
@@ -105,11 +104,40 @@ class ProductListingFragment : Fragment() {
 
     }
 
-    private fun getCategoryData(categoryResult: Response<ResposeCategoryData>?) {
+    private fun getCategoryData(
+        categoryResult: Response<ResposeCategoryData>?,
+        result: Response<List<ProductsDataItem>>?
+    ) {
         val adaptor = categoryResult?.body()?.let { CategoryAdaptor(it) }
         val gridLayout = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
         categoryGridItems?.layoutManager = gridLayout
         categoryGridItems?.adapter = adaptor
+
+        adaptor?.setOnItemClickListener(object : CategoryAdaptor.onItemClickListerner{
+            override fun onItemClick(position: Int) {
+                val categoryList = ArrayList<ProductsDataItem>()
+                val categoryName = categoryResult.body()!!.get(position)
+                Log.d("MMMMM",categoryName)
+                for(i in result?.body()!!){
+                    if(i.category == categoryName){
+                        categoryList.add(i)
+                    }
+                }
+                val adaptor1 = categoryList.let { GridItemAdaptor(it) }
+                val gridLayout1 = GridLayoutManager(activity,2)
+                gridItems?.layoutManager = gridLayout1
+                gridItems?.adapter = adaptor1
+                adaptor1.setOnItemClickListener(object : GridItemAdaptor.onItemClickListerner{
+                    override fun onItemClick(position: Int) {
+                        val bundle = Bundle()
+                        bundle.putString("id", categoryList.get(position).id.toString())
+                        view?.let { Navigation.findNavController(it).navigate(R.id.product_details,bundle) }
+                    }
+                })
+
+            }
+
+        })
     }
 
 
