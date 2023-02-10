@@ -145,7 +145,7 @@
     //About Us
     <string name="aboutusMiniHeading">Nice to meet you</string>
     <string name="Detailed">We are a fashion destination for the contemporary Indian who seeks authentic brand experiences. As the official online platform for International brands like U.S. Polo Assn., Sephora, Arrow, Tommy Hilfiger, Calvin Klein, Aéropostale, Ed Hardy, and leading Indian brands like Flying Machine, AD by Arvind, Ruggers, Colt, Shuffl, Anahi and Karigari amongst many others, we not only showcase the largest width of merchandise for these brands but also offer the freshest in-season products.</string>
-    <string name="google">open<a href ="https://www.google.com/"> google</a></string>
+    <string name="google">open<a href="https://www.google.com/"> google</a></string>
     <string name="head">C l o t h i n g</string>
 
     //Check out
@@ -169,7 +169,15 @@
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">56789</string>
 
+    // FAQ and Privacy screens
 
-
+    <string name="privacy_description">This Privacy Policy describes Our policies and procedures on the collection,use and disclosure of Your information when You use the Service and tells You about Your Privacy rights and how the law protects You. We use Your Personal data to provide and improves the Service.By using the Service,You agree to the collection and use of information in accordance with this Privacy Policy.</string>
+    <string name="privacy_statement">Privacy Statement</string>
+    <string name="firstQue">I want to track my order?</string>
+    <string name="firstAns">Check order status and call the delivery agent</string>
+    <string name="secondQue">I want help with returns and refunds?</string>
+    <string name="secondAns">Manage and track returns</string>
+    <string name="thirdQue">I want to manage my order?</string>
+    <string name="thirdAns">Cancel,change delivery date and address</string>
 
 </resources>

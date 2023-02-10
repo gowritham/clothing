@@ -110,7 +110,7 @@
             >
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/faq_nav"
                 android:layout_width="51dp"
                 android:layout_height="67dp"
                 android:layout_marginStart="17dp"
@@ -268,7 +268,7 @@
             >
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/ps_nav"
                 android:layout_width="51dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="17dp"
