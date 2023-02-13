@@ -34,75 +34,115 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/start_end_margin"
-        android:layout_marginTop="@dimen/top_margin"
-        android:layout_marginEnd="@dimen/start_end_margin"
-        android:background="@drawable/background_inputfiled_for_edittext"
-        android:ems="5"
-        android:textSize="@dimen/text_size"
-        android:inputType="textPersonName"
-        android:elevation="5dp"
-        android:hint="@string/name"
-        android:drawableStart="@drawable/ic_profile2"
-        android:drawablePadding="@dimen/drawable_padding"
-        android:padding="@dimen/padding"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:autofillHints=""/>
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/orange"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/start_end_margin"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="@dimen/start_end_margin"
-        android:autofillHints=""
-        android:background="@drawable/background_inputfiled_for_edittext"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="@dimen/drawable_padding"
-        android:elevation="5dp"
-        android:ems="5"
-        android:hint="@string/email_address"
-        android:inputType="textEmailAddress"
-        android:padding="@dimen/padding"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+            android:ems="5"
+            android:textSize="@dimen/text_size"
+            android:inputType="textPersonName"
+
+            android:hint="@string/name"
+            android:drawableStart="@drawable/ic_profile2"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:autofillHints=""/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/start_end_margin"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="@dimen/start_end_margin"
-        android:autofillHints=""
-        android:background="@drawable/background_inputfiled_for_edittext"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="@dimen/drawable_padding"
-        android:elevation="5dp"
-        android:ems="5"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:padding="@dimen/padding"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/orange"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout3">
+
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:autofillHints=""
+
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:elevation="5dp"
+            android:ems="5"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/start_end_margin"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/orange"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/password_toggle"
+        app:passwordToggleTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/textLayout4">
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ems="5"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -112,7 +152,7 @@
         android:layout_marginTop="18dp"
         android:buttonTint="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout5" />
 
     <TextView
         android:id="@+id/textView2"
@@ -124,7 +164,7 @@
         android:textColor="@color/grey"
         android:textSize="@dimen/text_size"
         app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout5" />
 
     <TextView
         android:id="@+id/textView3"
@@ -136,7 +176,7 @@
         android:textColor="@color/black2"
         android:textSize="@dimen/text_size"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout5" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
@@ -248,7 +288,7 @@
         android:textColor="@color/red"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout3" />
 
     <TextView
         android:id="@+id/emailHelper"
@@ -258,7 +298,7 @@
         android:textColor="@color/red"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout4" />
 
     <TextView
         android:id="@+id/passwordHelper"
@@ -268,7 +308,7 @@
         android:textColor="@color/red"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout5" />
 
 
     <com.facebook.login.widget.LoginButton
