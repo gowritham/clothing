@@ -1,13 +1,10 @@
 package com.clothing.UI
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Base64
 import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -20,8 +17,8 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 
 import com.clothing.R
+import com.clothing.UI.retrofit.AllUsersItem
 import com.clothing.UI.retrofit.ProductsApi
-import com.clothing.UI.retrofit.RegisterResponse
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -34,6 +31,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.android.material.snackbar.Snackbar
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Call
@@ -41,17 +39,16 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.security.MessageDigest
 
 
 class AccountCreationFragment : Fragment() {
 
-    private lateinit var builder: AlertDialog.Builder
     private lateinit var gso: GoogleSignInOptions
     private lateinit var gsc: GoogleSignInClient
     var callBackManager: CallbackManager? = null
     var facebookLoginButton: LoginButton? = null
     var facebookIcon : ImageView? = null
+    var emailList : ArrayList<String> = arrayListOf()
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -156,54 +153,29 @@ class AccountCreationFragment : Fragment() {
                 passwordHelper.text="Password Required"
             } else {
                 if (Patterns.EMAIL_ADDRESS.matcher(mailAddress.text.toString()).matches() && userName.text.toString().isNotEmpty() && password.text.length>=6 && chechbox.isChecked) {
-                    val retrofit = Retrofit.Builder()
-                        .baseUrl("https://fakestoreapi.com")
+                        val retrofitBuilder = Retrofit.Builder()
                         .addConverterFactory(GsonConverterFactory.create())
+                        .baseUrl("https://fakestoreapi.com")
                         .build()
+                        .create(ProductsApi::class.java)
 
-                    val retrofitApi = retrofit.create(ProductsApi::class.java)
-                    val userDataOne = RegisterResponse(id)
-                    val call: Call<RegisterResponse> = retrofitApi.registerPost(userDataOne)
-                    call.enqueue(object: Callback<RegisterResponse> {
-                        override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>){
-
-                            if(response.code() == 200){
-                                val id= response.body()?.id
-                                if(id == 1){
-                                    builder = context?.let { it1 -> AlertDialog.Builder(it1) }!!
-                                    builder.setTitle("Failed!")
-                                        .setMessage("Existing User!!")
-                                        .setCancelable(true)
-                                        .setPositiveButton("Retry"){ _, _ ->
-                                            //finish()
-                                        }
-                                        .setNeutralButton("Help"){ _, _ ->
-                                            // just show a toast
-                                            Toast.makeText(activity,"Help Clicked",Toast.LENGTH_SHORT).show()
-                                        }
-                                        .show()
-
-
-                                }else{
-                                    builder = context?.let { it1 -> AlertDialog.Builder(it1) }!!
-                                    builder.setTitle("Success!")
-                                        .setMessage("Registration Succeed!!")
-                                        .setCancelable(true)
-                                        .setPositiveButton("Okay"){ _, _ ->
-                                            //finish()
-                                        }
-                                        .setNeutralButton("Help"){ _, _ ->
-                                            // just show a toast
-                                            Toast.makeText(activity,"Help Clicked",Toast.LENGTH_SHORT).show()
-                                        }
-                                        .show()
-
-                                }
+                    val  retrofitData = retrofitBuilder.getDate()
+                    retrofitData.enqueue(object : Callback<List<AllUsersItem>?> {
+                        override fun onResponse(call: Call<List<AllUsersItem>?>, response: Response<List<AllUsersItem>?>) {
+                            for(i in response.body()?.indices!!){
+                                response.body()?.get(i)?.let { it1 -> emailList.add(it1.email) }
                             }
-                        }
+                            if(emailList.contains(mailAddress.text.toString())){
+                                Snackbar.make(it,"Already Existed",Snackbar.LENGTH_LONG).show()
+                            }
+                            else{
+                                Snackbar.make(it,"Registered Successfully",Snackbar.LENGTH_LONG).show()
+                            }
 
-                        override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                            // we get error response from API.
+
+                        }
+                        override fun onFailure(call: Call<List<AllUsersItem>?>, t: Throwable) {
+                            Log.d("mainActivity","onFailure:"+t.message)
                         }
                     })
 

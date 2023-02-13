@@ -20,6 +20,4 @@ interface ProductsApi {
     suspend fun getCategoriesData():Response<ResposeCategoryData>
     @GET("users")
     fun getDate(): Call<List<AllUsersItem>>
-    @POST("/users")
-    fun registerPost(@Body data : RegisterResponse) : Call<RegisterResponse>
 }
