@@ -49,7 +49,7 @@ class CartAdaptor(val titleL: ArrayList<Items>) :
     }
 
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             holder.tvTitle.text = titleL.get(position).title
             holder.tvPrice.text = titleL.get(position).price
@@ -84,6 +84,7 @@ class CartAdaptor(val titleL: ArrayList<Items>) :
                 mListener.onDelete(position,totalPrice,titleL.get(position).title)
                 titleL.removeAt(holder.adapterPosition)
                 notifyItemRemoved(holder.adapterPosition)
+                notifyDataSetChanged()
 
             }
 
