@@ -14,21 +14,22 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.clothing.R
 import com.clothing.UI.retrofit.GridItemAdaptor
+import com.clothing.UI.retrofit.Items
 import com.clothing.UI.retrofit.ProductsData
 import com.clothing.UI.retrofit.ProductsDataItem
 import com.squareup.picasso.Picasso
-class CartAdaptor(val titleL: ArrayList<String>, val priceL: ArrayList<String>, val imageL: ArrayList<String>) :
+class CartAdaptor(val titleL: ArrayList<Items>) :
     RecyclerView.Adapter<CartAdaptor.ViewHolder>() {
         private lateinit var mListener : onItemClickListerner
         interface onItemClickListerner{
             fun onItemClick(position: Int)
             fun onClick(position: Int)
-            fun onDelete(position: Int,price : Int)
+            fun onDelete(position: Int,price : Int,title : String)
         }
         fun setOnItemClickListener(listener : onItemClickListerner){
             mListener = listener
         }
-    class ViewHolder(itemView: View,listener : onItemClickListerner) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val image: ImageView = itemView.findViewById(R.id.cartItemImage)
         val tvTitle: TextView = itemView.findViewById(R.id.cartItemTitle)
@@ -44,18 +45,18 @@ class CartAdaptor(val titleL: ArrayList<String>, val priceL: ArrayList<String>, 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cart_card_item,parent,false)
-        return ViewHolder(view,mListener)
+        return ViewHolder(view)
     }
 
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.tvTitle.text = titleL.get(position)
-            holder.tvPrice.text = priceL.get(position)
-            Picasso.get().load(imageL.get(position)).into(holder.image)
+            holder.tvTitle.text = titleL.get(position).title
+            holder.tvPrice.text = titleL.get(position).price
+            Picasso.get().load(titleL.get(position).image).into(holder.image)
 
             var totalPrice = 0
-            val eachTotal = priceL.get(position).toDouble().toInt()
+            val eachTotal = titleL.get(position).price.toDouble().toInt()
             totalPrice = totalPrice + eachTotal
             var quantity : Int= holder.quantity.text.toString().toInt()
             holder.adding.setOnClickListener {
@@ -80,9 +81,10 @@ class CartAdaptor(val titleL: ArrayList<String>, val priceL: ArrayList<String>, 
                 }
             }
             holder.delete.setOnClickListener {
+                mListener.onDelete(position,totalPrice,titleL.get(position).title)
                 titleL.removeAt(holder.adapterPosition)
                 notifyItemRemoved(holder.adapterPosition)
-                mListener.onDelete(position,totalPrice)
+
             }
 
 

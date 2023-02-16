@@ -68,10 +68,17 @@ class HomeFragment : Fragment() {
         if(account != null){
             textH.text=account.displayName
         }
-        val counter:Int=prefs.getInt("count",0)
-        bottomNavigationView.getOrCreateBadge(R.id.cart).number = counter
-        bottomNavigationView.getOrCreateBadge(R.id.cart).backgroundColor = Color.parseColor("#F67952")
+        if(prefs.getInt("count",0) != 0 ){
+            bottomNavigationView.getOrCreateBadge(R.id.cart).number = prefs.getInt("count",0)
+            bottomNavigationView.getOrCreateBadge(R.id.cart).backgroundColor = Color.parseColor("#F67952")
+        }
         bottomNavigationView.setOnItemSelectedListener {
+            if(prefs.getInt("count",0) != 0 ){
+                bottomNavigationView.getOrCreateBadge(R.id.cart).number = prefs.getInt("count",0)
+                bottomNavigationView.getOrCreateBadge(R.id.cart).backgroundColor = Color.parseColor("#F67952")
+            }else{
+                bottomNavigationView.getOrCreateBadge(R.id.cart).setVisible(false)
+            }
             when(it.itemId){
                 R.id.home -> {
                     replaceFragment(ProductListingFragment())

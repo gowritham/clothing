@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.SearchView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -31,6 +32,7 @@ class ProductListingFragment : Fragment() {
     var categoryGridItems : RecyclerView? = null
     lateinit var progressBar: ProgressBar
     lateinit var searchview : SearchView
+    lateinit var loading : TextView
 
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(
@@ -44,6 +46,7 @@ class ProductListingFragment : Fragment() {
         progressBar.visibility = View.VISIBLE
         categoryGridItems = view.findViewById(R.id.recycler_view)
         searchview = view.findViewById(R.id.search)
+        loading = view.findViewById(R.id.loading)
 
         searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -63,6 +66,7 @@ class ProductListingFragment : Fragment() {
             val result = productsApi?.getProducts1()
             val categoryResult = categoryApi?.getCategoriesData()
             progressBar.visibility = View.GONE
+            loading.visibility = View.GONE
             Log.d("data", result?.body().toString())
             if (result != null) {
                 searchList = result.body()
@@ -142,8 +146,6 @@ class ProductListingFragment : Fragment() {
 
 
     private fun getData(result: Response<List<ProductsDataItem>>?) {
-        //Toast.makeText(activity,"sssss",Toast.LENGTH_SHORT).show()
-
         cartList = result?.body()
         val adaptor = cartList?.let { GridItemAdaptor(it) }
         val gridLayout = GridLayoutManager(activity,2)
@@ -153,19 +155,6 @@ class ProductListingFragment : Fragment() {
         adaptor?.setOnItemClickListener(object : GridItemAdaptor.onItemClickListerner{
             override fun onItemClick(position: Int) {
                 val bundle = Bundle()
-                /*bundle.putString("image",result.body()?.get(position)?.image)
-                bundle.putString("title",result.body()?.get(position)?.title)
-                bundle.putString("price",result.body()?.get(position)?.price.toString())
-                bundle.putString("description",result.body()?.get(position)?.description)*/
-
-                /*val appContext = requireContext().applicationContext
-                val prefs = appContext.getSharedPreferences(shared, Context.MODE_PRIVATE)
-                val editor = prefs.edit()
-                val counter:Int=prefs.getInt("count",0)
-                editor.putInt("count",counter+1)
-                editor.putString("titles"+counter,result?.body()?.get(position)?.title)
-                editor.apply()
-                editor.commit()*/
                 bundle.putString("id",result?.body()?.get(position)?.id.toString())
                 view?.let { Navigation.findNavController(it).navigate(R.id.product_details,bundle) }
             }

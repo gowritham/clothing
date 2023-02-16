@@ -1,6 +1,7 @@
 package com.clothing.UI
 
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -37,6 +38,7 @@ class ProductDetails : Fragment() {
     var count : Int = 0
 
 
+    @SuppressLint("SetTextI18n")
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -85,40 +87,26 @@ class ProductDetails : Fragment() {
 
         }
         addToCart.setOnClickListener {
-            //bottom = view.findViewById(R.id.bottomNavigationView)
-            //updateBadgeCount(count)
-            /*val counter1 = prefs.getInt("count",0)
-            var start : Int = 0
-            while (start<counter1){
-                titleList.add(prefs.getString("titles"+start,"Unknown").toString())
-                start += 1
-            }*/
+            val sharedTitles = prefs.all.values
+            if(sharedTitles.contains(title) == false) {
 
-                Toast.makeText(activity,"Item Added to Cart",Toast.LENGTH_SHORT).show()
-                val counter:Int=prefs.getInt("count",0)
-                editor.putInt("id",id.toInt())
-                editor.putString("Title"+counter,title)
-                editor.putString("Price"+counter,price)
-                editor.putString("Image"+counter,image)
-                editor.putInt("count",counter+1)
+                Toast.makeText(activity, "Item Added to Cart", Toast.LENGTH_SHORT).show()
+                val counter: Int = prefs.getInt("count", 0)
+                editor.putInt("id", id.toInt())
+                editor.putString("Title" + counter, title)
+                editor.putString("Price" + counter, price)
+                editor.putString("Image" + counter, image)
+                editor.putInt("count", counter + 1)
                 editor.apply()
+            }
+            else{
+                addToCart.setText("Go to Cart")
+            }
 
 
         }
-
-
-        /*Picasso.get().load(requireArguments().getString("image")).into(pdImageView3)
-        productDetailsTitle.setText(requireArguments().getString("title"))
-        productDetailsPrice.setText(requireArguments().getString("price"))
-        productDetailsDescription.setText(requireArguments().getString("description"))*/
         return view
 
     }
-    /*private fun updateBadgeCount(count: Int=1) {
-        val itemView: BottomNavigationItemView? = bottom.getChildAt(1) as? BottomNavigationItemView
-        notificationsBadges = LayoutInflater.from(this).inflate(R.layout.card_badge, itemView, true)
-        notificationsBadges?.textView.text = count.toString()
-        bottom?.addView(notificationsBadges)
-        this.count += 1
-    }*/
+
 }
