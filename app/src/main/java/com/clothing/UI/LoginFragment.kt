@@ -141,6 +141,11 @@ class LoginFragment : Fragment() {
                 .getSignedInAccountFromIntent(data)
             try {
                 task.getResult(ApiException::class.java)
+                val appContext = requireContext().applicationContext
+                val prefs = appContext.getSharedPreferences(shared,Context.MODE_PRIVATE)
+                val editor = prefs.edit()
+                editor.putBoolean("islogin",true)
+                editor.apply()
                 findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
 
             }
